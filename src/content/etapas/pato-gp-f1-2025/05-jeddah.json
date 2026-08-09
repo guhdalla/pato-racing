@@ -7,15 +7,15 @@
   "sessoes": [
     {
       "tipo": "treino-livre-1",
-      "dataHora": "2026-10-18T17:30:00Z"
+      "dataHora": "2026-08-25T00:00:00Z"
     },
     {
       "tipo": "classificacao",
-      "dataHora": "2026-10-18T18:30:00Z"
+      "dataHora": "2026-08-25T00:45:00Z"
     },
     {
       "tipo": "corrida",
-      "dataHora": "2026-10-18T19:00:00Z"
+      "dataHora": "2026-08-25T01:15:00Z"
     }
   ]
 }

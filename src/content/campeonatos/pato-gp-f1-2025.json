@@ -4,7 +4,7 @@
   "temporada": 2025,
   "status": "agendado",
   "descricao": "O primeiro Grande Prêmio oficial da comunidade Pato Racing, disputado no F1 25, passando pelos 24 circuitos do calendário. 24 etapas, uma temporada, um campeão.",
-  "regulamentoTexto": "Formato de fim de semana: treino livre + classificação + corrida (com sessões extras de sprint em etapas selecionadas). Duração de corrida: distância total do circuito conforme ficha técnica. Danos e penalidades de simulador ativados. Regras detalhadas de conduta e formato serão publicadas no Discord da comunidade antes da primeira etapa.",
+  "regulamentoTexto": "Formato de fim de semana: treino livre único de no máximo 30 minutos + classificação curta + corrida (com sessões extras de classificação sprint e sprint em etapas selecionadas). Distância de corrida: 25% da distância original de cada Grande Prêmio. Corridas às segundas e sextas-feiras, com treino livre a partir das 21h (horário de Brasília). Assistências: direção e freio assistidos desligados; freio ABS permitido; controle de tração completo permitido; assistência de boxes, DRS e ERS ativadas. Danos e penalidades de simulador ativados. Regras detalhadas de conduta serão publicadas no Discord da comunidade antes da primeira etapa.",
   "sistemaPontuacao": [
     { "posicao": 1, "pontos": 25 },
     { "posicao": 2, "pontos": 18 },
@@ -28,6 +28,6 @@
     { "posicao": 7, "pontos": 2 },
     { "posicao": 8, "pontos": 1 }
   ],
-  "dataInicio": "2026-08-23T19:00:00Z",
-  "dataFim": "2027-07-11T21:00:00Z"
+  "dataInicio": "2026-08-11T00:00:00Z",
+  "dataFim": "2026-10-31T02:15:00Z"
 }
