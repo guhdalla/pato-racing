@@ -1,0 +1,21 @@
+{
+  "campeonatoId": "pato-gp-f1-2025",
+  "rodada": 5,
+  "circuitoId": "jeddah",
+  "formatoFimDeSemana": "normal",
+  "status": "agendada",
+  "sessoes": [
+    {
+      "tipo": "treino-livre-1",
+      "dataHora": "2026-10-18T17:30:00Z"
+    },
+    {
+      "tipo": "classificacao",
+      "dataHora": "2026-10-18T18:30:00Z"
+    },
+    {
+      "tipo": "corrida",
+      "dataHora": "2026-10-18T19:00:00Z"
+    }
+  ]
+}

@@ -1,0 +1,29 @@
+{
+  "campeonatoId": "pato-gp-f1-2025",
+  "rodada": 6,
+  "circuitoId": "miami",
+  "formatoFimDeSemana": "sprint",
+  "status": "agendada",
+  "sessoes": [
+    {
+      "tipo": "treino-livre-1",
+      "dataHora": "2026-11-01T16:30:00Z"
+    },
+    {
+      "tipo": "classificacao-sprint",
+      "dataHora": "2026-11-01T17:00:00Z"
+    },
+    {
+      "tipo": "sprint",
+      "dataHora": "2026-11-01T17:30:00Z"
+    },
+    {
+      "tipo": "classificacao",
+      "dataHora": "2026-11-01T18:30:00Z"
+    },
+    {
+      "tipo": "corrida",
+      "dataHora": "2026-11-01T19:00:00Z"
+    }
+  ]
+}

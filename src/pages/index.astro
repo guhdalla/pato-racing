@@ -1,0 +1,170 @@
+---
+import { getCollection, getEntry, type CollectionEntry } from 'astro:content';
+import Layout from '../layouts/Layout.astro';
+import StatusBadge from '../components/StatusBadge.astro';
+import CircuitImage from '../components/CircuitImage.astro';
+import { campeonatoStatusBadge } from '../lib/status';
+
+const campeonatos = await getCollection('campeonatos');
+const etapas = await getCollection('etapas');
+const eventos = await getCollection('eventos');
+
+function corridaDataHora(etapa: CollectionEntry<'etapas'>) {
+  return etapa.data.sessoes.find((s) => s.tipo === 'corrida')?.dataHora;
+}
+
+const destaque =
+  campeonatos.find((c) => c.data.status === 'em-andamento') ??
+  [...campeonatos].sort((a, b) => a.data.dataInicio.valueOf() - b.data.dataInicio.valueOf())[0];
+
+const etapasDoDestaque = destaque
+  ? etapas
+      .filter((e) => e.data.campeonatoId === destaque.id)
+      .sort((a, b) => (corridaDataHora(a)?.valueOf() ?? 0) - (corridaDataHora(b)?.valueOf() ?? 0))
+  : [];
+
+const proximaEtapa = etapasDoDestaque.find((e) => e.data.status === 'agendada');
+const circuitoProxima = proximaEtapa
+  ? await getEntry('circuitos', proximaEtapa.data.circuitoId)
+  : null;
+
+const dateFormatter = new Intl.DateTimeFormat('pt-BR', {
+  day: '2-digit',
+  month: 'long',
+  year: 'numeric',
+  timeZone: 'UTC',
+});
+
+const base = import.meta.env.BASE_URL;
+---
+
+<Layout title="Início">
+  <section class="pr-hero">
+    <div class="pr-container pr-hero__inner">
+      <p class="pr-hero__eyebrow">Hub da comunidade</p>
+      <h1>Pato Racing</h1>
+      <p class="pr-hero__lead">
+        Eventos, campeonatos e GPs de simuladores de corrida organizados pela comunidade Pato
+        Racing.
+      </p>
+    </div>
+  </section>
+
+  {destaque && (
+    <section class="pr-section pr-container">
+      <div class="pr-feature">
+        <div class="pr-feature__info">
+          <p class="pr-hero__eyebrow">Campeonato em destaque</p>
+          <h2>{destaque.data.titulo}</h2>
+          <StatusBadge {...campeonatoStatusBadge(destaque.data.status)} />
+          <p>{destaque.data.descricao}</p>
+          <a class="pr-button" href={`${base}campeonatos/${destaque.id}/`}>Ver campeonato</a>
+        </div>
+
+        {proximaEtapa && circuitoProxima && (
+          <div class="pr-feature__next pr-card">
+            <div class="pr-card__image">
+              <CircuitImage
+                circuitoId={circuitoProxima.id}
+                nome={circuitoProxima.data.nome}
+                paisCodigo={circuitoProxima.data.paisCodigo}
+              />
+            </div>
+            <div class="pr-card__body">
+              <p class="pr-hero__eyebrow">Próxima corrida — Rodada {proximaEtapa.data.rodada}/{etapasDoDestaque.length}</p>
+              <h3 class="pr-card__title">{circuitoProxima.data.nome}</h3>
+              <p class="pr-card__meta">
+                <span class={`fi fi-${circuitoProxima.data.paisCodigo.toLowerCase()}`}></span>
+                {circuitoProxima.data.pais}
+                {' · '}
+                {corridaDataHora(proximaEtapa) && dateFormatter.format(corridaDataHora(proximaEtapa))}
+              </p>
+              <a href={`${base}campeonatos/${destaque.id}/${proximaEtapa.data.rodada}/`}>Ver detalhes da etapa →</a>
+            </div>
+          </div>
+        )}
+      </div>
+    </section>
+  )}
+
+  <section class="pr-section pr-container">
+    <h2>Campeonatos &amp; GPs</h2>
+    {campeonatos.length === 0 ? (
+      <p class="pr-empty-state">Nenhum campeonato cadastrado ainda.</p>
+    ) : (
+      <div class="pr-grid">
+        {campeonatos.map((c) => (
+          <a class="pr-card" href={`${base}campeonatos/${c.id}/`}>
+            <div class="pr-card__body">
+              <StatusBadge {...campeonatoStatusBadge(c.data.status)} />
+              <h3 class="pr-card__title">{c.data.titulo}</h3>
+              <p class="pr-card__meta">{c.data.jogo} · Temporada {c.data.temporada}</p>
+            </div>
+          </a>
+        ))}
+      </div>
+    )}
+  </section>
+
+  <section class="pr-section pr-container">
+    <h2>Eventos</h2>
+    {eventos.length === 0 ? (
+      <p class="pr-empty-state">Nenhum evento avulso cadastrado no momento — fique de olho no Discord da comunidade.</p>
+    ) : (
+      <div class="pr-grid">
+        {eventos.map((e) => (
+          <a class="pr-card" href={`${base}eventos/${e.id}/`}>
+            <div class="pr-card__body">
+              <h3 class="pr-card__title">{e.data.titulo}</h3>
+              <p class="pr-card__meta">{e.data.tipo}</p>
+            </div>
+          </a>
+        ))}
+      </div>
+    )}
+  </section>
+
+  <style>
+    .pr-hero {
+      background: radial-gradient(circle at top right, var(--pr-red-glow), transparent 60%),
+        var(--pr-bg-elevated);
+      border-bottom: 1px solid var(--pr-border);
+    }
+
+    .pr-hero__inner {
+      padding-block: var(--pr-space-2xl);
+    }
+
+    .pr-hero__eyebrow {
+      font-family: var(--pr-font-display);
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: var(--pr-red);
+      font-weight: 700;
+      font-size: 0.85rem;
+      margin: 0 0 0.5rem;
+    }
+
+    .pr-hero__lead {
+      max-width: 40ch;
+      font-size: 1.1rem;
+    }
+
+    .pr-feature {
+      display: grid;
+      grid-template-columns: 1.2fr 1fr;
+      gap: var(--pr-space-xl);
+      align-items: start;
+    }
+
+    @media (max-width: 800px) {
+      .pr-feature {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    .pr-feature__next .pr-card__image {
+      height: 180px;
+    }
+  </style>
+</Layout>

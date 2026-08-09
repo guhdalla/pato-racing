@@ -1,0 +1,64 @@
+---
+interface Sessao {
+  tipo:
+    | 'treino-livre-1'
+    | 'treino-livre-2'
+    | 'treino-livre-3'
+    | 'classificacao-sprint'
+    | 'sprint'
+    | 'classificacao'
+    | 'corrida';
+  dataHora: Date;
+}
+
+interface Props {
+  sessoes: Sessao[];
+}
+
+const { sessoes } = Astro.props;
+
+const labels: Record<Sessao['tipo'], string> = {
+  'treino-livre-1': 'Treino Livre 1',
+  'treino-livre-2': 'Treino Livre 2',
+  'treino-livre-3': 'Treino Livre 3',
+  'classificacao-sprint': 'Classificação Sprint',
+  sprint: 'Sprint',
+  classificacao: 'Classificação',
+  corrida: 'Corrida',
+};
+
+const ordered = [...sessoes].sort((a, b) => a.dataHora.valueOf() - b.dataHora.valueOf());
+
+const dateFormatter = new Intl.DateTimeFormat('pt-BR', {
+  weekday: 'short',
+  day: '2-digit',
+  month: '2-digit',
+  timeZone: 'UTC',
+});
+---
+
+<table class="pr-table">
+  <thead>
+    <tr>
+      <th>Sessão</th>
+      <th>Data</th>
+      <th>Horário (UTC)</th>
+    </tr>
+  </thead>
+  <tbody>
+    {ordered.map((s) => (
+      <tr class={s.tipo === 'corrida' ? 'pr-table__row--race' : ''}>
+        <td>{labels[s.tipo] ?? s.tipo}</td>
+        <td>{dateFormatter.format(s.dataHora)}</td>
+        <td>{s.dataHora.toISOString().slice(11, 16)}</td>
+      </tr>
+    ))}
+  </tbody>
+</table>
+
+<style>
+  .pr-table__row--race td:first-child {
+    color: var(--pr-red);
+    font-weight: 600;
+  }
+</style>

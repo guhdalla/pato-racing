@@ -1,0 +1,161 @@
+---
+import { getCollection, type CollectionEntry } from 'astro:content';
+import Layout from '../../../layouts/Layout.astro';
+import StatusBadge from '../../../components/StatusBadge.astro';
+import CircuitImage from '../../../components/CircuitImage.astro';
+import { campeonatoStatusBadge, etapaStatusBadge } from '../../../lib/status';
+import { calcularClassificacaoPilotos, calcularClassificacaoEquipes } from '../../../lib/standings';
+
+export async function getStaticPaths() {
+  const campeonatos = await getCollection('campeonatos');
+  return campeonatos.map((campeonato) => ({
+    params: { slug: campeonato.id },
+    props: { campeonato },
+  }));
+}
+
+interface Props {
+  campeonato: CollectionEntry<'campeonatos'>;
+}
+
+const { campeonato } = Astro.props;
+
+const todasEtapas = await getCollection('etapas');
+const etapas = todasEtapas
+  .filter((e) => e.data.campeonatoId === campeonato.id)
+  .sort((a, b) => a.data.rodada - b.data.rodada);
+
+const circuitos = await getCollection('circuitos');
+const circuitoPorId = new Map(circuitos.map((c) => [c.id, c.data]));
+
+const classificacaoPilotos = calcularClassificacaoPilotos(etapas);
+const classificacaoEquipes = calcularClassificacaoEquipes(etapas);
+
+const dateFormatter = new Intl.DateTimeFormat('pt-BR', {
+  day: '2-digit',
+  month: 'short',
+  timeZone: 'UTC',
+});
+
+function corridaDataHora(etapa: CollectionEntry<'etapas'>) {
+  return etapa.data.sessoes.find((s) => s.tipo === 'corrida')?.dataHora;
+}
+
+const base = import.meta.env.BASE_URL;
+---
+
+<Layout title={campeonato.data.titulo} description={campeonato.data.descricao}>
+  <section class="pr-section pr-container">
+    <StatusBadge {...campeonatoStatusBadge(campeonato.data.status)} />
+    <h1>{campeonato.data.titulo}</h1>
+    <p class="pr-card__meta">{campeonato.data.jogo} · Temporada {campeonato.data.temporada} · {etapas.length} etapas</p>
+    <p>{campeonato.data.descricao}</p>
+    {campeonato.data.regulamentoTexto && (
+      <details class="pr-details">
+        <summary>Regulamento</summary>
+        <p>{campeonato.data.regulamentoTexto}</p>
+      </details>
+    )}
+    {campeonato.data.discordUrl && (
+      <p><a class="pr-button" href={campeonato.data.discordUrl}>Entrar no Discord</a></p>
+    )}
+  </section>
+
+  {(classificacaoPilotos.length > 0 || classificacaoEquipes.length > 0) && (
+    <section class="pr-section pr-container">
+      <h2>Classificação geral</h2>
+      <div class="pr-standings">
+        <div>
+          <h3>Pilotos</h3>
+          <table class="pr-table">
+            <thead>
+              <tr><th>#</th><th>Piloto</th><th>Equipe</th><th>Pontos</th></tr>
+            </thead>
+            <tbody>
+              {classificacaoPilotos.map((p, i) => (
+                <tr>
+                  <td>{i + 1}</td>
+                  <td>{p.piloto}</td>
+                  <td>{p.equipe ?? '—'}</td>
+                  <td>{p.pontos}</td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
+        </div>
+        {classificacaoEquipes.length > 0 && (
+          <div>
+            <h3>Equipes</h3>
+            <table class="pr-table">
+              <thead>
+                <tr><th>#</th><th>Equipe</th><th>Pontos</th></tr>
+              </thead>
+              <tbody>
+                {classificacaoEquipes.map((e, i) => (
+                  <tr>
+                    <td>{i + 1}</td>
+                    <td>{e.equipe}</td>
+                    <td>{e.pontos}</td>
+                  </tr>
+                ))}
+              </tbody>
+            </table>
+          </div>
+        )}
+      </div>
+    </section>
+  )}
+
+  <section class="pr-section pr-container">
+    <h2>Calendário</h2>
+    <div class="pr-grid">
+      {etapas.map((etapa) => {
+        const circuito = circuitoPorId.get(etapa.data.circuitoId);
+        const dataHora = corridaDataHora(etapa);
+        return (
+          <a class="pr-card" href={`${base}campeonatos/${campeonato.id}/${etapa.data.rodada}/`}>
+            <div class="pr-card__image">
+              {circuito && (
+                <CircuitImage circuitoId={circuito.id} nome={circuito.nome} paisCodigo={circuito.paisCodigo} />
+              )}
+            </div>
+            <div class="pr-card__body">
+              <StatusBadge {...etapaStatusBadge(etapa.data.status)} />
+              <h3 class="pr-card__title">Rodada {etapa.data.rodada} — {circuito?.nome ?? etapa.data.circuitoId}</h3>
+              <p class="pr-card__meta">
+                {circuito && <span class={`fi fi-${circuito.paisCodigo.toLowerCase()}`}></span>}
+                {dataHora && dateFormatter.format(dataHora)}
+                {etapa.data.formatoFimDeSemana === 'sprint' && ' · Sprint'}
+              </p>
+            </div>
+          </a>
+        );
+      })}
+    </div>
+  </section>
+
+  <style>
+    .pr-standings {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: var(--pr-space-xl);
+      margin-top: var(--pr-space-lg);
+    }
+
+    .pr-details {
+      margin-top: var(--pr-space-md);
+      background: var(--pr-surface);
+      border: 1px solid var(--pr-border);
+      border-radius: var(--pr-radius);
+      padding: var(--pr-space-md);
+    }
+
+    .pr-details summary {
+      cursor: pointer;
+      font-family: var(--pr-font-display);
+      text-transform: uppercase;
+      font-weight: 700;
+      letter-spacing: 0.03em;
+    }
+  </style>
+</Layout>

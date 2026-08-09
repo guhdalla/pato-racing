@@ -1,0 +1,83 @@
+---
+import { getCollection, type CollectionEntry } from 'astro:content';
+import Layout from '../../layouts/Layout.astro';
+import CircuitImage from '../../components/CircuitImage.astro';
+import CircuitStats from '../../components/CircuitStats.astro';
+import StatusBadge from '../../components/StatusBadge.astro';
+import { etapaStatusBadge } from '../../lib/status';
+
+export async function getStaticPaths() {
+  const circuitos = await getCollection('circuitos');
+  return circuitos.map((circuito) => ({
+    params: { id: circuito.id },
+    props: { circuito },
+  }));
+}
+
+interface Props {
+  circuito: CollectionEntry<'circuitos'>;
+}
+
+const { circuito } = Astro.props;
+
+const campeonatos = await getCollection('campeonatos');
+const campeonatoPorId = new Map(campeonatos.map((c) => [c.id, c.data]));
+
+const historico = (await getCollection('etapas'))
+  .filter((e) => e.data.circuitoId === circuito.id)
+  .sort((a, b) => b.data.rodada - a.data.rodada);
+
+const dateFormatter = new Intl.DateTimeFormat('pt-BR', { day: '2-digit', month: 'short', year: 'numeric', timeZone: 'UTC' });
+const base = import.meta.env.BASE_URL;
+---
+
+<Layout title={circuito.data.nome} description={circuito.data.curiosidades ?? `Ficha técnica do circuito ${circuito.data.nome}.`}>
+  <section class="pr-etapa-hero">
+    <div class="pr-container pr-etapa-hero__inner">
+      <span class={`fi fi-${circuito.data.paisCodigo.toLowerCase()} pr-etapa-hero__flag`}></span>
+      <div>
+        <p class="pr-hero__eyebrow">{circuito.data.pais} · {circuito.data.cidade}</p>
+        <h1>{circuito.data.nome}</h1>
+        {circuito.data.curiosidades && <p class="pr-card__meta">{circuito.data.curiosidades}</p>}
+      </div>
+    </div>
+  </section>
+
+  <section class="pr-section pr-container pr-etapa-grid">
+    <div class="pr-card pr-card__image pr-etapa-image">
+      <CircuitImage circuitoId={circuito.id} nome={circuito.data.nome} paisCodigo={circuito.data.paisCodigo} kind="tracado" alt={`Traçado do circuito ${circuito.data.nome}`} />
+    </div>
+
+    <CircuitStats
+      primeiroGp={circuito.data.primeiroGp}
+      numeroVoltasPadrao={circuito.data.numeroVoltasPadrao}
+      comprimentoKm={circuito.data.comprimentoKm}
+      numeroCurvas={circuito.data.numeroCurvas}
+      sentido={circuito.data.sentido}
+      recordeVolta={circuito.data.recordeVolta}
+    />
+  </section>
+
+  <section class="pr-section pr-container">
+    <h2>Corridas do Pato Racing neste circuito</h2>
+    {historico.length === 0 ? (
+      <p class="pr-empty-state">Ainda não houve corridas do Pato Racing neste circuito.</p>
+    ) : (
+      <div class="pr-grid">
+        {historico.map((etapa) => {
+          const campeonato = campeonatoPorId.get(etapa.data.campeonatoId);
+          const dataHora = etapa.data.sessoes.find((s) => s.tipo === 'corrida')?.dataHora;
+          return (
+            <a class="pr-card" href={`${base}campeonatos/${etapa.data.campeonatoId}/${etapa.data.rodada}/`}>
+              <div class="pr-card__body">
+                <StatusBadge {...etapaStatusBadge(etapa.data.status)} />
+                <h3 class="pr-card__title">{campeonato?.titulo ?? etapa.data.campeonatoId} — Rodada {etapa.data.rodada}</h3>
+                {dataHora && <p class="pr-card__meta">{dateFormatter.format(dataHora)}</p>}
+              </div>
+            </a>
+          );
+        })}
+      </div>
+    )}
+  </section>
+</Layout>

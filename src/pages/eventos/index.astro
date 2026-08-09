@@ -1,0 +1,38 @@
+---
+import { getCollection } from 'astro:content';
+import Layout from '../../layouts/Layout.astro';
+
+const eventos = (await getCollection('eventos')).sort(
+  (a, b) => a.data.data.valueOf() - b.data.data.valueOf()
+);
+const base = import.meta.env.BASE_URL;
+
+const dateFormatter = new Intl.DateTimeFormat('pt-BR', {
+  day: '2-digit',
+  month: 'long',
+  year: 'numeric',
+  timeZone: 'UTC',
+});
+---
+
+<Layout title="Eventos" description="Eventos avulsos organizados pela comunidade Pato Racing.">
+  <section class="pr-section pr-container">
+    <h1>Eventos</h1>
+    <p>Eventos avulsos da comunidade — corridas únicas, endurance, encontros e mais.</p>
+
+    {eventos.length === 0 ? (
+      <p class="pr-empty-state">Nenhum evento avulso cadastrado no momento — fique de olho no Discord da comunidade.</p>
+    ) : (
+      <div class="pr-grid">
+        {eventos.map((e) => (
+          <a class="pr-card" href={`${base}eventos/${e.id}/`}>
+            <div class="pr-card__body">
+              <h3 class="pr-card__title">{e.data.titulo}</h3>
+              <p class="pr-card__meta">{e.data.tipo} · {dateFormatter.format(e.data.data)}</p>
+            </div>
+          </a>
+        ))}
+      </div>
+    )}
+  </section>
+</Layout>

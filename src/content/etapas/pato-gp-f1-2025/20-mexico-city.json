@@ -1,0 +1,21 @@
+{
+  "campeonatoId": "pato-gp-f1-2025",
+  "rodada": 20,
+  "circuitoId": "mexico-city",
+  "formatoFimDeSemana": "normal",
+  "status": "agendada",
+  "sessoes": [
+    {
+      "tipo": "treino-livre-1",
+      "dataHora": "2027-05-16T17:30:00Z"
+    },
+    {
+      "tipo": "classificacao",
+      "dataHora": "2027-05-16T18:30:00Z"
+    },
+    {
+      "tipo": "corrida",
+      "dataHora": "2027-05-16T19:00:00Z"
+    }
+  ]
+}

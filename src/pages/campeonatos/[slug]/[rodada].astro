@@ -1,0 +1,195 @@
+---
+import { getCollection, getEntry, type CollectionEntry } from 'astro:content';
+import Layout from '../../../layouts/Layout.astro';
+import StatusBadge from '../../../components/StatusBadge.astro';
+import CircuitImage from '../../../components/CircuitImage.astro';
+import CircuitStats from '../../../components/CircuitStats.astro';
+import WeekendSchedule from '../../../components/WeekendSchedule.astro';
+import { etapaStatusBadge } from '../../../lib/status';
+
+export async function getStaticPaths() {
+  const etapas = await getCollection('etapas');
+  const campeonatos = await getCollection('campeonatos');
+  const campeonatoPorId = new Map(campeonatos.map((c) => [c.id, c]));
+
+  return etapas
+    .filter((etapa) => campeonatoPorId.has(etapa.data.campeonatoId))
+    .map((etapa) => ({
+      params: { slug: etapa.data.campeonatoId, rodada: String(etapa.data.rodada) },
+      props: { etapa, campeonato: campeonatoPorId.get(etapa.data.campeonatoId)! },
+    }));
+}
+
+interface Props {
+  etapa: CollectionEntry<'etapas'>;
+  campeonato: CollectionEntry<'campeonatos'>;
+}
+
+const { etapa, campeonato } = Astro.props;
+const circuito = await getEntry('circuitos', etapa.data.circuitoId);
+
+const totalEtapas = (await getCollection('etapas')).filter(
+  (e) => e.data.campeonatoId === campeonato.id
+).length;
+
+const dateFormatter = new Intl.DateTimeFormat('pt-BR', {
+  weekday: 'long',
+  day: '2-digit',
+  month: 'long',
+  timeZone: 'UTC',
+});
+
+const corridaDataHora = etapa.data.sessoes.find((s) => s.tipo === 'corrida')?.dataHora;
+const base = import.meta.env.BASE_URL;
+---
+
+<Layout
+  title={`Rodada ${etapa.data.rodada} — ${circuito?.data.nome ?? ''}`}
+  description={`${campeonato.data.titulo}: rodada ${etapa.data.rodada} de ${totalEtapas}, em ${circuito?.data.nome}.`}
+>
+  <section class="pr-etapa-hero">
+    <div class="pr-container pr-etapa-hero__inner">
+      {circuito && <span class={`fi fi-${circuito.data.paisCodigo.toLowerCase()} pr-etapa-hero__flag`}></span>}
+      <div>
+        <p class="pr-hero__eyebrow">
+          <a href={`${base}campeonatos/${campeonato.id}/`}>{campeonato.data.titulo}</a>
+          {' · '}Rodada {etapa.data.rodada}/{totalEtapas}
+        </p>
+        <h1>{circuito?.data.nome}</h1>
+        <p class="pr-card__meta">
+          {circuito?.data.pais}
+          {corridaDataHora && ` · ${dateFormatter.format(corridaDataHora)}`}
+        </p>
+        <StatusBadge {...etapaStatusBadge(etapa.data.status)} />
+        {etapa.data.formatoFimDeSemana === 'sprint' && <span class="pr-badge pr-badge--danger">Fim de semana Sprint</span>}
+      </div>
+    </div>
+  </section>
+
+  <section class="pr-section pr-container pr-etapa-grid">
+    <div class="pr-card pr-card__image pr-etapa-image">
+      {circuito && (
+        <CircuitImage circuitoId={circuito.id} nome={circuito.data.nome} paisCodigo={circuito.data.paisCodigo} kind="tracado" alt={`Traçado do circuito ${circuito.data.nome}`} />
+      )}
+    </div>
+
+    {circuito && (
+      <CircuitStats
+        primeiroGp={circuito.data.primeiroGp}
+        numeroVoltasPadrao={circuito.data.numeroVoltasPadrao}
+        comprimentoKm={circuito.data.comprimentoKm}
+        numeroCurvas={circuito.data.numeroCurvas}
+        sentido={circuito.data.sentido}
+        recordeVolta={circuito.data.recordeVolta}
+      />
+    )}
+  </section>
+
+  <section class="pr-section pr-container">
+    <h2>Cronograma do fim de semana</h2>
+    <WeekendSchedule sessoes={etapa.data.sessoes} />
+  </section>
+
+  {etapa.data.status === 'concluida' && (
+    <section class="pr-section pr-container">
+      <h2>Resultado</h2>
+      <div class="pr-resultado-highlights">
+        {etapa.data.poleposition && <p><strong>Pole position:</strong> {etapa.data.poleposition}</p>}
+        {etapa.data.voltaMaisRapida && <p><strong>Volta mais rápida:</strong> {etapa.data.voltaMaisRapida}</p>}
+        {etapa.data.podio && etapa.data.podio.length > 0 && (
+          <p><strong>Pódio:</strong> {etapa.data.podio.join(' · ')}</p>
+        )}
+      </div>
+
+      {etapa.data.resultadoCorrida && (
+        <table class="pr-table">
+          <thead>
+            <tr><th>Pos.</th><th>Piloto</th><th>Equipe</th><th>Pontos</th></tr>
+          </thead>
+          <tbody>
+            {etapa.data.resultadoCorrida.map((r) => (
+              <tr>
+                <td>{r.posicao}</td>
+                <td>{r.piloto}{r.voltaMaisRapida ? ' ⚡' : ''}</td>
+                <td>{r.equipe ?? '—'}</td>
+                <td>{r.pontos}</td>
+              </tr>
+            ))}
+          </tbody>
+        </table>
+      )}
+
+      {etapa.data.resultadoClassificacao && (
+        <>
+          <h3>Classificação</h3>
+          <table class="pr-table">
+            <thead>
+              <tr><th>Pos.</th><th>Piloto</th><th>Equipe</th><th>Tempo</th></tr>
+            </thead>
+            <tbody>
+              {etapa.data.resultadoClassificacao.map((r) => (
+                <tr>
+                  <td>{r.posicao}</td>
+                  <td>{r.piloto}</td>
+                  <td>{r.equipe ?? '—'}</td>
+                  <td>{r.tempo ?? '—'}</td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
+        </>
+      )}
+    </section>
+  )}
+
+  {(etapa.data.linkTransmissao || etapa.data.observacoes) && (
+    <section class="pr-section pr-container">
+      {etapa.data.linkTransmissao && (
+        <p><a class="pr-button" href={etapa.data.linkTransmissao}>Assistir transmissão</a></p>
+      )}
+      {etapa.data.observacoes && <p>{etapa.data.observacoes}</p>}
+    </section>
+  )}
+
+  <style>
+    .pr-etapa-hero {
+      background: var(--pr-bg-elevated);
+      border-bottom: 1px solid var(--pr-border);
+    }
+
+    .pr-etapa-hero__inner {
+      display: flex;
+      align-items: center;
+      gap: var(--pr-space-lg);
+      padding-block: var(--pr-space-xl);
+    }
+
+    .pr-etapa-hero__flag {
+      font-size: 3.5rem;
+      flex-shrink: 0;
+      border-radius: 4px;
+      box-shadow: 0 0 0 1px var(--pr-border);
+    }
+
+    .pr-etapa-grid {
+      display: grid;
+      grid-template-columns: 1.1fr 1fr;
+      gap: var(--pr-space-xl);
+      align-items: stretch;
+    }
+
+    @media (max-width: 800px) {
+      .pr-etapa-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    .pr-etapa-image {
+      min-height: 220px;
+    }
+
+    .pr-resultado-highlights p {
+      color: var(--pr-text);
+    }
+  </style>
+</Layout>

@@ -1,0 +1,29 @@
+{
+  "campeonatoId": "pato-gp-f1-2025",
+  "rodada": 2,
+  "circuitoId": "shanghai",
+  "formatoFimDeSemana": "sprint",
+  "status": "agendada",
+  "sessoes": [
+    {
+      "tipo": "treino-livre-1",
+      "dataHora": "2026-09-06T16:30:00Z"
+    },
+    {
+      "tipo": "classificacao-sprint",
+      "dataHora": "2026-09-06T17:00:00Z"
+    },
+    {
+      "tipo": "sprint",
+      "dataHora": "2026-09-06T17:30:00Z"
+    },
+    {
+      "tipo": "classificacao",
+      "dataHora": "2026-09-06T18:30:00Z"
+    },
+    {
+      "tipo": "corrida",
+      "dataHora": "2026-09-06T19:00:00Z"
+    }
+  ]
+}

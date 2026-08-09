@@ -1,0 +1,32 @@
+---
+import { getCollection } from 'astro:content';
+import Layout from '../../layouts/Layout.astro';
+import CircuitImage from '../../components/CircuitImage.astro';
+
+const circuitos = (await getCollection('circuitos')).sort((a, b) => a.data.nome.localeCompare(b.data.nome));
+const base = import.meta.env.BASE_URL;
+---
+
+<Layout title="Circuitos" description="Catálogo de circuitos usados nos campeonatos e GPs da comunidade Pato Racing.">
+  <section class="pr-section pr-container">
+    <h1>Circuitos</h1>
+    <p>Catálogo com todos os circuitos já usados em campeonatos e GPs do Pato Racing.</p>
+
+    <div class="pr-grid">
+      {circuitos.map((c) => (
+        <a class="pr-card" href={`${base}circuitos/${c.id}/`}>
+          <div class="pr-card__image">
+            <CircuitImage circuitoId={c.id} nome={c.data.nome} paisCodigo={c.data.paisCodigo} />
+          </div>
+          <div class="pr-card__body">
+            <h3 class="pr-card__title">{c.data.nome}</h3>
+            <p class="pr-card__meta">
+              <span class={`fi fi-${c.data.paisCodigo.toLowerCase()}`}></span>
+              {c.data.pais}
+            </p>
+          </div>
+        </a>
+      ))}
+    </div>
+  </section>
+</Layout>
