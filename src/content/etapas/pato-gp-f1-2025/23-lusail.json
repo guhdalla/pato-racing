@@ -1,0 +1,29 @@
+{
+  "campeonatoId": "pato-gp-f1-2025",
+  "rodada": 23,
+  "circuitoId": "lusail",
+  "formatoFimDeSemana": "sprint",
+  "status": "agendada",
+  "sessoes": [
+    {
+      "tipo": "treino-livre-1",
+      "dataHora": "2027-06-27T16:30:00Z"
+    },
+    {
+      "tipo": "classificacao-sprint",
+      "dataHora": "2027-06-27T17:00:00Z"
+    },
+    {
+      "tipo": "sprint",
+      "dataHora": "2027-06-27T17:30:00Z"
+    },
+    {
+      "tipo": "classificacao",
+      "dataHora": "2027-06-27T18:30:00Z"
+    },
+    {
+      "tipo": "corrida",
+      "dataHora": "2027-06-27T19:00:00Z"
+    }
+  ]
+}

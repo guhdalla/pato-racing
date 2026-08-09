@@ -1,0 +1,21 @@
+{
+  "campeonatoId": "pato-gp-f1-2025",
+  "rodada": 4,
+  "circuitoId": "bahrain",
+  "formatoFimDeSemana": "normal",
+  "status": "agendada",
+  "sessoes": [
+    {
+      "tipo": "treino-livre-1",
+      "dataHora": "2026-10-04T17:30:00Z"
+    },
+    {
+      "tipo": "classificacao",
+      "dataHora": "2026-10-04T18:30:00Z"
+    },
+    {
+      "tipo": "corrida",
+      "dataHora": "2026-10-04T19:00:00Z"
+    }
+  ]
+}

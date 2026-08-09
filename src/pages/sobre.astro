@@ -1,0 +1,31 @@
+---
+import Layout from '../layouts/Layout.astro';
+---
+
+<Layout title="Sobre" description="Sobre a comunidade Pato Racing.">
+  <section class="pr-section pr-container pr-sobre">
+    <h1>Sobre o Pato Racing</h1>
+    <p>
+      O Pato Racing é uma comunidade de simuladores de corrida. Organizamos eventos,
+      campeonatos e GPs para quem gosta de disputar corridas online — de curtas
+      exibições avulsas a temporadas inteiras com calendário, pontuação e classificação
+      geral, como o <a href={`${import.meta.env.BASE_URL}campeonatos/pato-gp-f1-2025/`}>Pato GP de F1 2025</a>.
+    </p>
+    <p>
+      Este site é o hub central da comunidade: aqui você encontra o calendário de cada
+      campeonato, informações de cada circuito, resultados das corridas já disputadas e
+      os próximos eventos.
+    </p>
+    <p>
+      O site é 100% aberto — todo o código e os dados de campeonatos, etapas e circuitos
+      ficam versionados no
+      <a href="https://github.com/guhdalla/pato-racing">repositório do GitHub</a>.
+    </p>
+  </section>
+
+  <style>
+    .pr-sobre p {
+      max-width: 65ch;
+    }
+  </style>
+</Layout>

@@ -1,0 +1,32 @@
+---
+import { getCollection } from 'astro:content';
+import Layout from '../../layouts/Layout.astro';
+import StatusBadge from '../../components/StatusBadge.astro';
+import { campeonatoStatusBadge } from '../../lib/status';
+
+const campeonatos = await getCollection('campeonatos');
+const base = import.meta.env.BASE_URL;
+---
+
+<Layout title="Campeonatos" description="Todos os campeonatos e GPs organizados pela comunidade Pato Racing.">
+  <section class="pr-section pr-container">
+    <h1>Campeonatos &amp; GPs</h1>
+    <p>Todos os campeonatos organizados pela comunidade, passados, ativos e futuros.</p>
+
+    {campeonatos.length === 0 ? (
+      <p class="pr-empty-state">Nenhum campeonato cadastrado ainda.</p>
+    ) : (
+      <div class="pr-grid">
+        {campeonatos.map((c) => (
+          <a class="pr-card" href={`${base}campeonatos/${c.id}/`}>
+            <div class="pr-card__body">
+              <StatusBadge {...campeonatoStatusBadge(c.data.status)} />
+              <h3 class="pr-card__title">{c.data.titulo}</h3>
+              <p class="pr-card__meta">{c.data.jogo} · Temporada {c.data.temporada}</p>
+            </div>
+          </a>
+        ))}
+      </div>
+    )}
+  </section>
+</Layout>

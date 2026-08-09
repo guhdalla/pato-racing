@@ -1,0 +1,80 @@
+---
+interface RecordeVolta {
+  tempo: string;
+  piloto: string;
+  ano: number;
+}
+
+interface Props {
+  primeiroGp: number;
+  numeroVoltasPadrao: number;
+  comprimentoKm: number;
+  numeroCurvas: number;
+  sentido: 'horario' | 'anti-horario';
+  recordeVolta?: RecordeVolta;
+}
+
+const { primeiroGp, numeroVoltasPadrao, comprimentoKm, numeroCurvas, sentido, recordeVolta } = Astro.props;
+const distanciaCorridaKm = numeroVoltasPadrao * comprimentoKm;
+
+const stats = [
+  { label: 'Primeiro GP', value: String(primeiroGp) },
+  { label: 'Nº de Voltas', value: String(numeroVoltasPadrao) },
+  { label: 'Comprimento', value: `${comprimentoKm.toFixed(3)} km` },
+  { label: 'Distância da Corrida', value: `${distanciaCorridaKm.toFixed(3)} km` },
+  { label: 'Nº de Curvas', value: String(numeroCurvas) },
+  { label: 'Sentido', value: sentido === 'horario' ? 'Horário' : 'Anti-horário' },
+];
+---
+
+<div class="pr-stats-grid">
+  {stats.map((s) => (
+    <div class="pr-stat">
+      <span class="pr-stat__label">{s.label}</span>
+      <span class="pr-stat__value">{s.value}</span>
+    </div>
+  ))}
+  {recordeVolta && (
+    <div class="pr-stat pr-stat--wide">
+      <span class="pr-stat__label">Recorde da Volta</span>
+      <span class="pr-stat__value">{recordeVolta.tempo} — {recordeVolta.piloto} ({recordeVolta.ano})</span>
+    </div>
+  )}
+</div>
+
+<style>
+  .pr-stats-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 1px;
+    background: var(--pr-border);
+    border: 1px solid var(--pr-border);
+    border-radius: var(--pr-radius);
+    overflow: hidden;
+  }
+
+  .pr-stat {
+    background: var(--pr-surface);
+    padding: var(--pr-space-md);
+    display: flex;
+    flex-direction: column;
+    gap: 0.25rem;
+  }
+
+  .pr-stat--wide {
+    grid-column: 1 / -1;
+  }
+
+  .pr-stat__label {
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+    color: var(--pr-text-dim);
+  }
+
+  .pr-stat__value {
+    font-family: var(--pr-font-display);
+    font-weight: 700;
+    font-size: 1.25rem;
+  }
+</style>

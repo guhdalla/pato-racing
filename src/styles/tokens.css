@@ -1,0 +1,226 @@
+:root {
+  /* Cores */
+  --pr-bg: #0b0b0f;
+  --pr-bg-elevated: #15151e;
+  --pr-surface: #1c1c24;
+  --pr-surface-hover: #24242e;
+  --pr-border: #2c2c38;
+
+  --pr-red: #e30613;
+  --pr-red-dark: #a5040d;
+  --pr-red-glow: rgba(227, 6, 19, 0.35);
+
+  --pr-text: #f5f5f7;
+  --pr-text-muted: #9a9aa5;
+  --pr-text-dim: #6b6b76;
+
+  --pr-gold: #d4af37;
+  --pr-silver: #c0c0c8;
+  --pr-bronze: #cd7f32;
+  --pr-green: #16c172;
+
+  /* Tipografia */
+  --pr-font-display: 'Barlow Condensed', 'Arial Narrow', sans-serif;
+  --pr-font-body: 'Titillium Web', system-ui, sans-serif;
+
+  /* Espaçamento */
+  --pr-space-xs: 0.25rem;
+  --pr-space-sm: 0.5rem;
+  --pr-space-md: 1rem;
+  --pr-space-lg: 1.5rem;
+  --pr-space-xl: 2.5rem;
+  --pr-space-2xl: 4rem;
+
+  --pr-radius: 6px;
+  --pr-max-width: 1200px;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background: var(--pr-bg);
+  color: var(--pr-text);
+  font-family: var(--pr-font-body);
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  font-family: var(--pr-font-display);
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.02em;
+  margin: 0 0 var(--pr-space-sm);
+}
+
+h1 {
+  font-size: clamp(2rem, 5vw, 3.25rem);
+}
+
+h2 {
+  font-size: clamp(1.5rem, 3vw, 2.25rem);
+}
+
+h3 {
+  font-size: 1.25rem;
+}
+
+a {
+  color: var(--pr-red);
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+p {
+  color: var(--pr-text-muted);
+}
+
+.pr-container {
+  max-width: var(--pr-max-width);
+  margin: 0 auto;
+  padding: 0 var(--pr-space-lg);
+}
+
+.pr-badge {
+  display: inline-block;
+  font-family: var(--pr-font-display);
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  font-size: 0.75rem;
+  padding: 0.2rem 0.6rem;
+  border-radius: var(--pr-radius);
+  background: var(--pr-surface);
+  border: 1px solid var(--pr-border);
+  color: var(--pr-text-muted);
+}
+
+.pr-badge--neutral {
+  color: var(--pr-text);
+  border-color: var(--pr-border);
+}
+
+.pr-badge--success {
+  color: var(--pr-green);
+  border-color: var(--pr-green);
+}
+
+.pr-badge--danger {
+  color: var(--pr-red);
+  border-color: var(--pr-red);
+}
+
+.pr-card {
+  background: var(--pr-surface);
+  border: 1px solid var(--pr-border);
+  border-radius: var(--pr-radius);
+  overflow: hidden;
+  transition: border-color 0.15s ease, transform 0.15s ease;
+}
+
+.pr-card:hover {
+  border-color: var(--pr-red);
+}
+
+.pr-button {
+  display: inline-block;
+  font-family: var(--pr-font-display);
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  background: var(--pr-red);
+  color: #fff;
+  padding: 0.6rem 1.4rem;
+  border-radius: var(--pr-radius);
+}
+
+.pr-button:hover {
+  background: var(--pr-red-dark);
+  text-decoration: none;
+}
+
+table.pr-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-family: var(--pr-font-body);
+}
+
+table.pr-table th,
+table.pr-table td {
+  text-align: left;
+  padding: 0.6rem 0.8rem;
+  border-bottom: 1px solid var(--pr-border);
+}
+
+table.pr-table th {
+  font-family: var(--pr-font-display);
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  font-size: 0.8rem;
+  color: var(--pr-text-muted);
+}
+
+.pr-section {
+  padding-block: var(--pr-space-xl);
+}
+
+.pr-section + .pr-section {
+  border-top: 1px solid var(--pr-border);
+}
+
+.pr-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  gap: var(--pr-space-lg);
+  margin-top: var(--pr-space-lg);
+}
+
+.pr-card__image {
+  aspect-ratio: 16 / 9;
+}
+
+.pr-card__body {
+  padding: var(--pr-space-md);
+}
+
+.pr-card__title {
+  font-family: var(--pr-font-display);
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.02em;
+  font-size: 1.1rem;
+  margin: 0 0 0.35rem;
+  color: var(--pr-text);
+}
+
+.pr-card__meta {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+  font-size: 0.85rem;
+  color: var(--pr-text-muted);
+}
+
+.pr-empty-state {
+  color: var(--pr-text-dim);
+  border: 1px dashed var(--pr-border);
+  border-radius: var(--pr-radius);
+  padding: var(--pr-space-xl);
+  text-align: center;
+  margin-top: var(--pr-space-lg);
+}

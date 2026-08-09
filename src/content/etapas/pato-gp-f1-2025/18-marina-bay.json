@@ -1,0 +1,21 @@
+{
+  "campeonatoId": "pato-gp-f1-2025",
+  "rodada": 18,
+  "circuitoId": "marina-bay",
+  "formatoFimDeSemana": "normal",
+  "status": "agendada",
+  "sessoes": [
+    {
+      "tipo": "treino-livre-1",
+      "dataHora": "2027-04-18T17:30:00Z"
+    },
+    {
+      "tipo": "classificacao",
+      "dataHora": "2027-04-18T18:30:00Z"
+    },
+    {
+      "tipo": "corrida",
+      "dataHora": "2027-04-18T19:00:00Z"
+    }
+  ]
+}
