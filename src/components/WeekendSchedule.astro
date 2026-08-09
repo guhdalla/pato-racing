@@ -33,7 +33,14 @@ const dateFormatter = new Intl.DateTimeFormat('pt-BR', {
   weekday: 'short',
   day: '2-digit',
   month: '2-digit',
-  timeZone: 'UTC',
+  timeZone: 'America/Sao_Paulo',
+});
+
+const timeFormatter = new Intl.DateTimeFormat('pt-BR', {
+  hour: '2-digit',
+  minute: '2-digit',
+  hour12: false,
+  timeZone: 'America/Sao_Paulo',
 });
 ---
 
@@ -42,7 +49,7 @@ const dateFormatter = new Intl.DateTimeFormat('pt-BR', {
     <tr>
       <th>Sessão</th>
       <th>Data</th>
-      <th>Horário (UTC)</th>
+      <th>Horário (Brasília)</th>
     </tr>
   </thead>
   <tbody>
@@ -50,7 +57,7 @@ const dateFormatter = new Intl.DateTimeFormat('pt-BR', {
       <tr class={s.tipo === 'corrida' ? 'pr-table__row--race' : ''}>
         <td>{labels[s.tipo] ?? s.tipo}</td>
         <td>{dateFormatter.format(s.dataHora)}</td>
-        <td>{s.dataHora.toISOString().slice(11, 16)}</td>
+        <td>{timeFormatter.format(s.dataHora)}</td>
       </tr>
     ))}
   </tbody>

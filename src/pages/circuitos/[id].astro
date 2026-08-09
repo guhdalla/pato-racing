@@ -27,7 +27,7 @@ const historico = (await getCollection('etapas'))
   .filter((e) => e.data.circuitoId === circuito.id)
   .sort((a, b) => b.data.rodada - a.data.rodada);
 
-const dateFormatter = new Intl.DateTimeFormat('pt-BR', { day: '2-digit', month: 'short', year: 'numeric', timeZone: 'UTC' });
+const dateFormatter = new Intl.DateTimeFormat('pt-BR', { day: '2-digit', month: 'short', year: 'numeric', timeZone: 'America/Sao_Paulo' });
 const base = import.meta.env.BASE_URL;
 ---
 
