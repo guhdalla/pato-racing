@@ -5,6 +5,7 @@ import CircuitImage from '../../components/CircuitImage.astro';
 import CircuitStats from '../../components/CircuitStats.astro';
 import StatusBadge from '../../components/StatusBadge.astro';
 import { etapaStatusBadge } from '../../lib/status';
+import { calcularRecordeComunidade } from '../../lib/circuitRecords';
 
 export async function getStaticPaths() {
   const circuitos = await getCollection('circuitos');
@@ -29,6 +30,14 @@ const historico = (await getCollection('etapas'))
 
 const dateFormatter = new Intl.DateTimeFormat('pt-BR', { day: '2-digit', month: 'short', year: 'numeric', timeZone: 'America/Sao_Paulo' });
 const base = import.meta.env.BASE_URL;
+
+const recorde = calcularRecordeComunidade(historico, circuito.id);
+const recordeComunidade = recorde && {
+  piloto: recorde.piloto,
+  tempo: recorde.tempo,
+  contexto: `Rodada ${recorde.rodada} — ${campeonatoPorId.get(recorde.campeonatoId)?.titulo ?? recorde.campeonatoId}`,
+  href: `${base}campeonatos/${recorde.campeonatoId}/${recorde.rodada}/`,
+};
 ---
 
 <Layout title={circuito.data.nome} description={circuito.data.curiosidades ?? `Ficha técnica do circuito ${circuito.data.nome}.`}>
@@ -55,6 +64,7 @@ const base = import.meta.env.BASE_URL;
       numeroCurvas={circuito.data.numeroCurvas}
       sentido={circuito.data.sentido}
       recordeVolta={circuito.data.recordeVolta}
+      recordeComunidade={recordeComunidade}
     />
   </section>
 

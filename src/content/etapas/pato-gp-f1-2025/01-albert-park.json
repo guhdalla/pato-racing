@@ -3,7 +3,7 @@
   "rodada": 1,
   "circuitoId": "albert-park",
   "formatoFimDeSemana": "normal",
-  "status": "agendada",
+  "status": "concluida",
   "sessoes": [
     {
       "tipo": "treino-livre-1",
@@ -17,5 +17,17 @@
       "tipo": "corrida",
       "dataHora": "2026-08-11T01:15:00Z"
     }
-  ]
+  ],
+  "resultadoCorrida": [
+    { "posicao": 1, "piloto": "Paulo Henrique", "equipe": "Scuderia Ferrari HP", "pontos": 25, "voltaMaisRapida": true },
+    { "posicao": 2, "piloto": "Gustavo Dalla", "equipe": "Red Bull", "pontos": 18 },
+    { "posicao": 3, "piloto": "Tiago Sinatra", "equipe": "Mercedes-AMG Petronas", "pontos": 15 },
+    { "posicao": 4, "piloto": "Leonardo Araujo", "equipe": "McLaren", "pontos": 12 },
+    { "posicao": 5, "piloto": "Nathan Barros", "equipe": "KICK Sauber", "pontos": 10 }
+  ],
+  "poleposition": "Paulo Henrique",
+  "voltaMaisRapida": "Paulo Henrique (1:20.468)",
+  "podio": ["Paulo Henrique", "Gustavo Dalla", "Tiago Sinatra"],
+  "linkReplay": "replays/pato-gp-f1-2025/01-albert-park.frr",
+  "observacoes": "Incidentes: Tiago Sinatra (aviso por limites de pista, volta 5), Nathan Barros (avisos por corte de curva nas voltas 9 e 13, com punição de 3 segundos na volta 13) e Leonardo Araujo (aviso por corte de curva, volta 10)."
 }

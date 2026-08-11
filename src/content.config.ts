@@ -97,6 +97,7 @@ const etapas = defineCollection({
     voltaMaisRapida: z.string().optional(),
     podio: z.array(z.string()).max(3).optional(),
     linkTransmissao: z.string().url().optional(),
+    linkReplay: z.string().optional(),
     observacoes: z.string().optional(),
   }),
 });

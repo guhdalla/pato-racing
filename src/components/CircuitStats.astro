@@ -5,6 +5,13 @@ interface RecordeVolta {
   ano: number;
 }
 
+interface RecordeComunidade {
+  piloto: string;
+  tempo: string;
+  contexto: string;
+  href?: string;
+}
+
 interface Props {
   primeiroGp: number;
   numeroVoltasPadrao: number;
@@ -12,9 +19,10 @@ interface Props {
   numeroCurvas: number;
   sentido: 'horario' | 'anti-horario';
   recordeVolta?: RecordeVolta;
+  recordeComunidade?: RecordeComunidade;
 }
 
-const { primeiroGp, numeroVoltasPadrao, comprimentoKm, numeroCurvas, sentido, recordeVolta } = Astro.props;
+const { primeiroGp, numeroVoltasPadrao, comprimentoKm, numeroCurvas, sentido, recordeVolta, recordeComunidade } = Astro.props;
 const distanciaCorridaKm = numeroVoltasPadrao * comprimentoKm;
 
 const stats = [
@@ -38,6 +46,19 @@ const stats = [
     <div class="pr-stat pr-stat--wide">
       <span class="pr-stat__label">Recorde da Volta</span>
       <span class="pr-stat__value">{recordeVolta.tempo} — {recordeVolta.piloto} ({recordeVolta.ano})</span>
+    </div>
+  )}
+  {recordeComunidade && (
+    <div class="pr-stat pr-stat--wide">
+      <span class="pr-stat__label">Pato Racer mais rápido da pista</span>
+      <span class="pr-stat__value">
+        {recordeComunidade.tempo} — {recordeComunidade.href ? (
+          <a href={recordeComunidade.href}>{recordeComunidade.piloto}</a>
+        ) : (
+          recordeComunidade.piloto
+        )}
+      </span>
+      <span class="pr-card__meta">{recordeComunidade.contexto}</span>
     </div>
   )}
 </div>

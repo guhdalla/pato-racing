@@ -6,6 +6,7 @@ import CircuitImage from '../../../components/CircuitImage.astro';
 import CircuitStats from '../../../components/CircuitStats.astro';
 import WeekendSchedule from '../../../components/WeekendSchedule.astro';
 import { etapaStatusBadge } from '../../../lib/status';
+import { calcularRecordeComunidade } from '../../../lib/circuitRecords';
 
 export async function getStaticPaths() {
   const etapas = await getCollection('etapas');
@@ -41,6 +42,19 @@ const dateFormatter = new Intl.DateTimeFormat('pt-BR', {
 
 const corridaDataHora = etapa.data.sessoes.find((s) => s.tipo === 'corrida')?.dataHora;
 const base = import.meta.env.BASE_URL;
+
+const campeonatoPorId = new Map(
+  (await getCollection('campeonatos')).map((c) => [c.id, c.data])
+);
+const recorde = circuito
+  ? calcularRecordeComunidade(await getCollection('etapas'), circuito.id)
+  : undefined;
+const recordeComunidade = recorde && {
+  piloto: recorde.piloto,
+  tempo: recorde.tempo,
+  contexto: `Rodada ${recorde.rodada} — ${campeonatoPorId.get(recorde.campeonatoId)?.titulo ?? recorde.campeonatoId}`,
+  href: `${base}campeonatos/${recorde.campeonatoId}/${recorde.rodada}/`,
+};
 ---
 
 <Layout
@@ -81,6 +95,7 @@ const base = import.meta.env.BASE_URL;
         numeroCurvas={circuito.data.numeroCurvas}
         sentido={circuito.data.sentido}
         recordeVolta={circuito.data.recordeVolta}
+        recordeComunidade={recordeComunidade}
       />
     )}
   </section>
@@ -142,10 +157,20 @@ const base = import.meta.env.BASE_URL;
     </section>
   )}
 
-  {(etapa.data.linkTransmissao || etapa.data.observacoes) && (
+  {(etapa.data.linkTransmissao || etapa.data.linkReplay || etapa.data.observacoes) && (
     <section class="pr-section pr-container">
       {etapa.data.linkTransmissao && (
         <p><a class="pr-button" href={etapa.data.linkTransmissao}>Assistir transmissão</a></p>
+      )}
+      {etapa.data.linkReplay && (
+        <p>
+          <a class="pr-button" href={`${base}${etapa.data.linkReplay}`} download>Baixar replay (.frr)</a>
+        </p>
+      )}
+      {etapa.data.linkReplay && (
+        <p class="pr-card__meta">
+          Arquivo de replay do F1 25 — abra em <strong>Jogar novamente → Carregar replay</strong> dentro do jogo para assistir.
+        </p>
       )}
       {etapa.data.observacoes && <p>{etapa.data.observacoes}</p>}
     </section>

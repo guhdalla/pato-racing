@@ -64,9 +64,20 @@ Campos obrigatórios:
    - `resultadoCorrida`: lista de `{ posicao, piloto, equipe, pontos, voltaMaisRapida, status }`
      — o campo `pontos` é o que alimenta a **classificação geral automática** do campeonato,
      preencha com o valor já definido conforme `sistemaPontuacao`/`pontosSprint` do campeonato.
-   - `poleposition`, `voltaMaisRapida`, `podio` (lista com até 3 nomes), `linkTransmissao`, `observacoes`
+   - `poleposition`, `voltaMaisRapida`, `podio` (lista com até 3 nomes), `linkTransmissao`, `linkReplay`, `observacoes`
+   - `linkReplay`: caminho relativo do arquivo de replay do jogo (`.frr` no F1 25) dentro de `public/`,
+     ex: `"replays/<slug-campeonato>/NN-circuito.frr"`. Coloque o arquivo em
+     `public/replays/<slug-campeonato>/NN-circuito.frr` — a página só oferece um link de download
+     (não existe player de `.frr` no navegador; é preciso abrir o replay dentro do próprio jogo).
 4. Dê commit/push. A classificação geral de pilotos e equipes é recalculada automaticamente
    no próximo build — não precisa editar nenhum outro arquivo.
+
+**Formato do campo `voltaMaisRapida`**: escreva sempre como `"Piloto (tempo)"`, ex.:
+`"Paulo Henrique (1:20.468)"`. Esse formato é parseado em tempo de build
+(`src/lib/circuitRecords.ts`) para calcular o "Pato Racer mais rápido da pista" de cada
+circuito — a mais rápida entre todas as etapas já concluídas ali, em qualquer campeonato.
+Um formato diferente faz esse recorde da comunidade ser ignorado silenciosamente para
+aquela etapa (não quebra o build, só não conta pro cálculo).
 
 ## Como cadastrar um evento avulso
 
