@@ -3,7 +3,7 @@
   "rodada": 2,
   "circuitoId": "shanghai",
   "formatoFimDeSemana": "sprint",
-  "status": "agendada",
+  "status": "concluida",
   "sessoes": [
     {
       "tipo": "treino-livre-1",
@@ -25,5 +25,23 @@
       "tipo": "corrida",
       "dataHora": "2026-08-15T02:15:00Z"
     }
-  ]
+  ],
+  "resultadoCorrida": [
+    { "posicao": 1, "piloto": "Gustavo Dalla", "equipe": "Red Bull", "pontos": 25, "voltaMaisRapida": true },
+    { "posicao": 2, "piloto": "Iury Crespo", "equipe": "McLaren", "pontos": 18 },
+    { "posicao": 3, "piloto": "Victor Correia", "equipe": "McLaren", "pontos": 15 },
+    { "posicao": 4, "piloto": "Tiago Sinatra", "equipe": "Mercedes-AMG Petronas", "pontos": 12 },
+    { "posicao": 5, "piloto": "Leonardo Araujo", "equipe": "Scuderia Ferrari HP", "pontos": 10 }
+  ],
+  "poleposition": "Iury Crespo",
+  "voltaMaisRapida": "Gustavo Dalla (1:40.547)",
+  "podio": ["Gustavo Dalla", "Iury Crespo", "Victor Correia"],
+  "punicoes": [
+    { "volta": 1, "piloto": "Tiago Sinatra", "equipe": "Mercedes-AMG Petronas", "incidente": "Queimou largada", "punicao": "Punição de drive through" },
+    { "volta": 1, "piloto": "Tiago Sinatra", "equipe": "Mercedes-AMG Petronas", "incidente": "Queimou largada", "punicao": "Tempo de volta inválido" },
+    { "volta": 1, "piloto": "Leonardo Araujo", "equipe": "Scuderia Ferrari HP", "incidente": "Queimou largada", "punicao": "Punição de drive through" },
+    { "volta": 1, "piloto": "Leonardo Araujo", "equipe": "Scuderia Ferrari HP", "incidente": "Queimou largada", "punicao": "Tempo de volta inválido" },
+    { "tempo": "7:25.476", "volta": 4, "piloto": "Tiago Sinatra", "equipe": "Mercedes-AMG Petronas", "incidente": "Limites da pista excedidos", "punicao": "Aviso" }
+  ],
+  "linkReplay": "replays/pato-gp-f1-2025/02-shanghai.frr"
 }

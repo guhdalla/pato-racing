@@ -65,6 +65,9 @@ Campos obrigatórios:
      — o campo `pontos` é o que alimenta a **classificação geral automática** do campeonato,
      preencha com o valor já definido conforme `sistemaPontuacao`/`pontosSprint` do campeonato.
    - `poleposition`, `voltaMaisRapida`, `podio` (lista com até 3 nomes), `linkTransmissao`, `linkReplay`, `observacoes`
+   - `punicoes`: lista de incidentes/punições da corrida, cada item com
+     `{ tempo, volta, piloto, equipe, incidente, punicao }` (`tempo` e `volta` são opcionais).
+     Renderizada como tabela na página da etapa, junto com o resultado da corrida.
    - `linkReplay`: caminho relativo do arquivo de replay do jogo (`.frr` no F1 25) dentro de `public/`,
      ex: `"replays/<slug-campeonato>/NN-circuito.frr"`. Coloque o arquivo em
      `public/replays/<slug-campeonato>/NN-circuito.frr` — a página só oferece um link de download

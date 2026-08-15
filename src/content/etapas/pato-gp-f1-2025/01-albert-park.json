@@ -28,6 +28,12 @@
   "poleposition": "Paulo Henrique",
   "voltaMaisRapida": "Paulo Henrique (1:20.468)",
   "podio": ["Paulo Henrique", "Gustavo Dalla", "Tiago Sinatra"],
-  "linkReplay": "replays/pato-gp-f1-2025/01-albert-park.frr",
-  "observacoes": "Incidentes: Tiago Sinatra (aviso por limites de pista, volta 5), Nathan Barros (avisos por corte de curva nas voltas 9 e 13, com punição de 3 segundos na volta 13) e Leonardo Araujo (aviso por corte de curva, volta 10)."
+  "punicoes": [
+    { "tempo": "7:13.911", "volta": 5, "piloto": "Tiago Sinatra", "equipe": "Mercedes-AMG Petronas", "incidente": "Limites da pista excedidos", "punicao": "Aviso" },
+    { "tempo": "14:27.186", "volta": 9, "piloto": "Nathan Barros", "equipe": "KICK Sauber", "incidente": "Corte de curvas", "punicao": "Aviso" },
+    { "tempo": "14:32.016", "volta": 10, "piloto": "Leonardo Araujo", "equipe": "McLaren", "incidente": "Corte de curvas", "punicao": "Aviso" },
+    { "tempo": "21:42.049", "volta": 13, "piloto": "Nathan Barros", "equipe": "KICK Sauber", "incidente": "Corte de curvas", "punicao": "Aviso" },
+    { "tempo": "21:51.258", "volta": 13, "piloto": "Nathan Barros", "equipe": "KICK Sauber", "incidente": "Corte de curvas", "punicao": "3 segundos" }
+  ],
+  "linkReplay": "replays/pato-gp-f1-2025/01-albert-park.frr"
 }

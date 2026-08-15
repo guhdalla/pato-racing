@@ -96,6 +96,18 @@ const etapas = defineCollection({
     poleposition: z.string().optional(),
     voltaMaisRapida: z.string().optional(),
     podio: z.array(z.string()).max(3).optional(),
+    punicoes: z
+      .array(
+        z.object({
+          tempo: z.string().optional(),
+          volta: z.number().int().optional(),
+          piloto: z.string(),
+          equipe: z.string().optional(),
+          incidente: z.string(),
+          punicao: z.string(),
+        })
+      )
+      .optional(),
     linkTransmissao: z.string().url().optional(),
     linkReplay: z.string().optional(),
     observacoes: z.string().optional(),

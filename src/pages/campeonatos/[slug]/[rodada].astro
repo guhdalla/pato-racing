@@ -154,6 +154,29 @@ const recordeComunidade = recorde && {
           </table>
         </>
       )}
+
+      {etapa.data.punicoes && etapa.data.punicoes.length > 0 && (
+        <>
+          <h3>Punições</h3>
+          <table class="pr-table">
+            <thead>
+              <tr><th>Tempo</th><th>Volta</th><th>Piloto</th><th>Equipe</th><th>Incidente</th><th>Punição</th></tr>
+            </thead>
+            <tbody>
+              {etapa.data.punicoes.map((p) => (
+                <tr>
+                  <td>{p.tempo ?? '—'}</td>
+                  <td>{p.volta ?? '—'}</td>
+                  <td>{p.piloto}</td>
+                  <td>{p.equipe ?? '—'}</td>
+                  <td>{p.incidente}</td>
+                  <td>{p.punicao}</td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
+        </>
+      )}
     </section>
   )}
 
