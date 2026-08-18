@@ -3,7 +3,7 @@
   "rodada": 3,
   "circuitoId": "suzuka",
   "formatoFimDeSemana": "normal",
-  "status": "agendada",
+  "status": "concluida",
   "sessoes": [
     {
       "tipo": "treino-livre-1",
@@ -17,5 +17,27 @@
       "tipo": "corrida",
       "dataHora": "2026-08-18T01:15:00Z"
     }
-  ]
+  ],
+  "resultadoCorrida": [
+    { "posicao": 1, "piloto": "Paulo Henrique", "equipe": "Scuderia Ferrari HP", "pontos": 25, "voltaMaisRapida": true },
+    { "posicao": 2, "piloto": "Gustavo Dalla", "equipe": "Red Bull", "pontos": 18 },
+    { "posicao": 3, "piloto": "Iury Crespo", "equipe": "Mercedes-AMG Petronas", "pontos": 15 },
+    { "posicao": 4, "piloto": "Nathan Barros", "equipe": "KICK Sauber", "pontos": 12 },
+    { "posicao": 5, "piloto": "Victor Correia", "equipe": "McLaren", "pontos": 10 },
+    { "posicao": 6, "piloto": "Leonardo Araujo", "equipe": "McLaren", "pontos": 8 },
+    { "posicao": 7, "piloto": "Tiago Sinatra", "equipe": "Mercedes-AMG Petronas", "pontos": 6 }
+  ],
+  "poleposition": "Paulo Henrique",
+  "voltaMaisRapida": "Paulo Henrique (1:30.325)",
+  "podio": ["Paulo Henrique", "Gustavo Dalla", "Iury Crespo"],
+  "punicoes": [
+    { "volta": 1, "piloto": "Leonardo Araujo", "equipe": "McLaren", "incidente": "Queimou largada", "punicao": "Punição de drive through" },
+    { "volta": 1, "piloto": "Leonardo Araujo", "equipe": "McLaren", "incidente": "Queimou largada", "punicao": "Tempo de volta inválido" },
+    { "tempo": "7:01.783", "volta": 4, "piloto": "Tiago Sinatra", "equipe": "Mercedes-AMG Petronas", "incidente": "Corte de curvas", "punicao": "Punição de 10 segundo(s)" },
+    { "tempo": "7:02.282", "volta": 4, "piloto": "Leonardo Araujo", "equipe": "McLaren", "incidente": "Corte de curvas", "punicao": "3 segundo(s)" },
+    { "tempo": "7:58.069", "volta": 5, "piloto": "Leonardo Araujo", "equipe": "McLaren", "incidente": "Corte de curvas", "punicao": "Aviso" },
+    { "tempo": "12:03.422", "volta": 7, "piloto": "Leonardo Araujo", "equipe": "McLaren", "incidente": "Corte de curvas", "punicao": "Aviso" },
+    { "tempo": "19:19.119", "volta": 11, "piloto": "Leonardo Araujo", "equipe": "McLaren", "incidente": "Corte de curvas", "punicao": "3 segundo(s)" }
+  ],
+  "linkReplay": "replays/pato-gp-f1-2025/03-suzuka.frr"
 }
