@@ -3,19 +3,40 @@
   "rodada": 4,
   "circuitoId": "bahrain",
   "formatoFimDeSemana": "normal",
-  "status": "agendada",
+  "status": "concluida",
   "sessoes": [
     {
       "tipo": "treino-livre-1",
-      "dataHora": "2026-08-22T00:00:00Z"
+      "dataHora": "2026-08-19T00:00:00Z"
     },
     {
       "tipo": "classificacao",
-      "dataHora": "2026-08-22T00:45:00Z"
+      "dataHora": "2026-08-19T00:45:00Z"
     },
     {
       "tipo": "corrida",
-      "dataHora": "2026-08-22T01:15:00Z"
+      "dataHora": "2026-08-19T01:15:00Z"
     }
-  ]
+  ],
+  "resultadoCorrida": [
+    { "posicao": 1, "piloto": "Paulo Henrique", "equipe": "Scuderia Ferrari HP", "pontos": 25, "voltaMaisRapida": true },
+    { "posicao": 2, "piloto": "Gustavo Dalla", "equipe": "Red Bull", "pontos": 18 },
+    { "posicao": 3, "piloto": "Matheus Costa", "equipe": "Aston Martin", "pontos": 15 },
+    { "posicao": 4, "piloto": "Iury Crespo", "equipe": "Mercedes-AMG Petronas", "pontos": 12 },
+    { "posicao": 5, "piloto": "Tiago Sinatra", "equipe": "Mercedes-AMG Petronas", "pontos": 10 },
+    { "posicao": 6, "piloto": "Leonardo Araujo", "equipe": "Scuderia Ferrari HP", "pontos": 8 },
+    { "posicao": 7, "piloto": "Victor Correia", "equipe": "McLaren", "pontos": 6 }
+  ],
+  "poleposition": "Paulo Henrique",
+  "voltaMaisRapida": "Paulo Henrique (1:32.080)",
+  "podio": ["Paulo Henrique", "Gustavo Dalla", "Matheus Costa"],
+  "punicoes": [
+    { "tempo": "11.866", "volta": 1, "piloto": "Iury Crespo", "equipe": "Mercedes-AMG Petronas", "incidente": "Corte de curvas", "punicao": "3 segundo(s)" },
+    { "tempo": "12.683", "volta": 1, "piloto": "Matheus Costa", "equipe": "Aston Martin", "incidente": "Corte de curvas", "punicao": "3 segundo(s)" },
+    { "tempo": "8:43.828", "volta": 6, "piloto": "Victor Correia", "equipe": "McLaren", "incidente": "Corte de curvas", "punicao": "10 segundo(s)" },
+    { "tempo": "11:28.911", "volta": 7, "piloto": "Iury Crespo", "equipe": "Mercedes-AMG Petronas", "incidente": "Corte de curvas", "punicao": "3 segundo(s)" },
+    { "tempo": "18:20.940", "volta": 11, "piloto": "Leonardo Araujo", "equipe": "Scuderia Ferrari HP", "incidente": "Limites da pista excedidos", "punicao": "Aviso" },
+    { "tempo": "22:56.232", "volta": 14, "piloto": "Iury Crespo", "equipe": "Mercedes-AMG Petronas", "incidente": "Corte de curvas", "punicao": "Aviso" }
+  ],
+  "linkReplay": "replays/pato-gp-f1-2025/04-bahrain.frr"
 }
