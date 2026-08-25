@@ -3,7 +3,7 @@
   "rodada": 5,
   "circuitoId": "jeddah",
   "formatoFimDeSemana": "normal",
-  "status": "agendada",
+  "status": "concluida",
   "sessoes": [
     {
       "tipo": "treino-livre-1",
@@ -17,5 +17,40 @@
       "tipo": "corrida",
       "dataHora": "2026-08-25T01:15:00Z"
     }
-  ]
+  ],
+  "resultadoCorrida": [
+    { "posicao": 1, "piloto": "Alysson Litz", "equipe": "Red Bull", "pontos": 25 },
+    { "posicao": 2, "piloto": "Gustavo Dalla", "equipe": "Red Bull", "pontos": 18 },
+    { "posicao": 3, "piloto": "Victor Correia", "equipe": "McLaren", "pontos": 15 },
+    { "posicao": 4, "piloto": "Matheus Costa", "equipe": "Williams", "pontos": 12, "voltaMaisRapida": true },
+    { "posicao": 5, "piloto": "Tiago Sinatra", "equipe": "Mercedes-AMG Petronas", "pontos": 10 }
+  ],
+  "poleposition": "Alysson Litz",
+  "voltaMaisRapida": "Matheus Costa (1:36.898)",
+  "podio": ["Alysson Litz", "Gustavo Dalla", "Victor Correia"],
+  "punicoes": [
+    { "tempo": "10.146", "volta": 1, "piloto": "Alysson Litz", "equipe": "Red Bull", "incidente": "Corte de curvas", "punicao": "Aviso" },
+    { "tempo": "56.967", "volta": 1, "piloto": "Matheus Costa", "equipe": "Williams", "incidente": "Corte de curvas", "punicao": "Aviso" },
+    { "tempo": "1:47.829", "volta": 2, "piloto": "Alysson Litz", "equipe": "Red Bull", "incidente": "Corte de curvas", "punicao": "Aviso" },
+    { "tempo": "1:48.576", "volta": 2, "piloto": "Gustavo Dalla", "equipe": "Red Bull", "incidente": "Corte de curvas", "punicao": "3 segundo(s)" },
+    { "tempo": "1:48.990", "volta": 2, "piloto": "Matheus Costa", "equipe": "Williams", "incidente": "Corte de curvas", "punicao": "3 segundo(s)" },
+    { "tempo": "1:51.093", "volta": 2, "piloto": "Victor Correia", "equipe": "McLaren", "incidente": "Corte de curvas", "punicao": "Aviso" },
+    { "tempo": "2:15.468", "volta": 2, "piloto": "Gustavo Dalla", "equipe": "Red Bull", "incidente": "Corte de curvas", "punicao": "Aviso" },
+    { "tempo": "3:25.557", "volta": 3, "piloto": "Alysson Litz", "equipe": "Red Bull", "incidente": "Corte de curvas", "punicao": "Aviso" },
+    { "tempo": "3:25.574", "volta": 3, "piloto": "Alysson Litz", "equipe": "Red Bull", "incidente": "Múltiplas advertências", "punicao": "3 segundo(s)" },
+    { "tempo": "3:52.354", "volta": 3, "piloto": "Victor Correia", "equipe": "McLaren", "incidente": "Corte de curvas", "punicao": "Aviso" },
+    { "tempo": "6:45.538", "volta": 5, "piloto": "Alysson Litz", "equipe": "Red Bull", "incidente": "Limites da pista excedidos", "punicao": "Aviso" },
+    { "tempo": "8:27.809", "volta": 6, "piloto": "Victor Correia", "equipe": "McLaren", "incidente": "Limites da pista excedidos", "punicao": "Aviso" },
+    { "tempo": "8:27.832", "volta": 6, "piloto": "Victor Correia", "equipe": "McLaren", "incidente": "Múltiplas advertências", "punicao": "3 segundo(s)" },
+    { "tempo": "10:52.474", "volta": 7, "piloto": "Tiago Sinatra", "equipe": "Mercedes-AMG Petronas", "incidente": "Corte de curvas", "punicao": "3 segundo(s)" },
+    { "tempo": "12:00.252", "volta": 8, "piloto": "Alysson Litz", "equipe": "Red Bull", "incidente": "Limites da pista excedidos", "punicao": "Aviso" },
+    { "tempo": "12:05.693", "volta": 8, "piloto": "Victor Correia", "equipe": "McLaren", "incidente": "Corte de curvas", "punicao": "3 segundo(s)" },
+    { "tempo": "12:34.126", "volta": 8, "piloto": "Tiago Sinatra", "equipe": "Mercedes-AMG Petronas", "incidente": "Limites da pista excedidos", "punicao": "Aviso" },
+    { "tempo": "17:08.511", "volta": 11, "piloto": "Victor Correia", "equipe": "McLaren", "incidente": "Corte de curvas", "punicao": "3 segundo(s)" },
+    { "tempo": "18:53.581", "volta": 12, "piloto": "Gustavo Dalla", "equipe": "Red Bull", "incidente": "Corte de curvas", "punicao": "Aviso" },
+    { "tempo": "20:11.808", "volta": 13, "piloto": "Alysson Litz", "equipe": "Red Bull", "incidente": "Corte de curvas", "punicao": "Aviso" },
+    { "tempo": "20:11.825", "volta": 13, "piloto": "Alysson Litz", "equipe": "Red Bull", "incidente": "Múltiplas advertências", "punicao": "3 segundo(s)" },
+    { "tempo": "20:58.788", "volta": 13, "piloto": "Alysson Litz", "equipe": "Red Bull", "incidente": "Corte de curvas", "punicao": "Aviso" }
+  ],
+  "linkReplay": "replays/pato-gp-f1-2025/05-jeddah.frr"
 }
