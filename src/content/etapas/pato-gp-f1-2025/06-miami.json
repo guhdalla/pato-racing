@@ -3,7 +3,7 @@
   "rodada": 6,
   "circuitoId": "miami",
   "formatoFimDeSemana": "sprint",
-  "status": "agendada",
+  "status": "concluida",
   "sessoes": [
     {
       "tipo": "treino-livre-1",
@@ -25,5 +25,50 @@
       "tipo": "corrida",
       "dataHora": "2026-08-27T02:15:00Z"
     }
-  ]
+  ],
+  "resultadoCorrida": [
+    { "posicao": 1, "piloto": "Paulo Henrique", "equipe": "Scuderia Ferrari HP", "pontos": 25, "voltaMaisRapida": true },
+    { "posicao": 2, "piloto": "Gustavo Dalla", "equipe": "Red Bull", "pontos": 18 },
+    { "posicao": 3, "piloto": "Alysson Litz", "equipe": "Scuderia Ferrari HP", "pontos": 15 },
+    { "posicao": 4, "piloto": "Matheus Costa", "equipe": "Williams", "pontos": 12 },
+    { "posicao": 5, "piloto": "Leonardo Araujo", "equipe": "KICK Sauber", "pontos": 10 },
+    { "posicao": 6, "piloto": "Iury Crespo", "equipe": "Mercedes-AMG Petronas", "pontos": 8 },
+    { "posicao": 7, "piloto": "Tiago Sinatra", "equipe": "Mercedes-AMG Petronas", "pontos": 6 },
+    { "posicao": 8, "piloto": "Victor Correia", "equipe": "McLaren", "pontos": 4 },
+    { "posicao": 9, "piloto": "Leonardo Fujimura", "equipe": "Red Bull", "pontos": 2 }
+  ],
+  "poleposition": "Paulo Henrique",
+  "voltaMaisRapida": "Paulo Henrique (1:31.590)",
+  "podio": ["Paulo Henrique", "Gustavo Dalla", "Alysson Litz"],
+  "punicoes": [
+    { "tempo": "1:05.785", "volta": 1, "piloto": "Alysson Litz", "equipe": "Scuderia Ferrari HP", "incidente": "Corte de curvas", "punicao": "Aviso" },
+    { "tempo": "1:09.496", "volta": 1, "piloto": "Leonardo Araujo", "equipe": "KICK Sauber", "incidente": "Corte de curvas", "punicao": "Aviso" },
+    { "tempo": "1:12.292", "volta": 1, "piloto": "Leonardo Fujimura", "equipe": "Red Bull", "incidente": "Corte de curvas", "punicao": "Aviso" },
+    { "tempo": "1:31.993", "volta": 1, "piloto": "Victor Correia", "equipe": "McLaren", "incidente": "Corte de curvas", "punicao": "Aviso" },
+    { "tempo": "2:41.680", "volta": 2, "piloto": "Alysson Litz", "equipe": "Scuderia Ferrari HP", "incidente": "Corte de curvas", "punicao": "Aviso" },
+    { "tempo": "4:42.378", "volta": 3, "piloto": "Tiago Sinatra", "equipe": "Mercedes-AMG Petronas", "incidente": "Corte de curvas", "punicao": "Aviso" },
+    { "tempo": "6:23.818", "volta": 4, "piloto": "Tiago Sinatra", "equipe": "Mercedes-AMG Petronas", "incidente": "Corte de curvas", "punicao": "Aviso" },
+    { "tempo": "9:04.927", "volta": 6, "piloto": "Alysson Litz", "equipe": "Scuderia Ferrari HP", "incidente": "Limites da pista excedidos", "punicao": "Aviso" },
+    { "tempo": "9:04.944", "volta": 6, "piloto": "Alysson Litz", "equipe": "Scuderia Ferrari HP", "incidente": "Múltiplas advertências", "punicao": "3 segundo(s)" },
+    { "tempo": "9:12.849", "volta": 6, "piloto": "Matheus Costa", "equipe": "Williams", "incidente": "Corte de curvas", "punicao": "Aviso" },
+    { "tempo": "10:29.137", "volta": 7, "piloto": "Gustavo Dalla", "equipe": "Red Bull", "incidente": "Corte de curvas", "punicao": "Aviso" },
+    { "tempo": "13:28.902", "volta": 9, "piloto": "Alysson Litz", "equipe": "Scuderia Ferrari HP", "incidente": "Limites da pista excedidos", "punicao": "Aviso" },
+    { "tempo": "14:06.821", "volta": 8, "piloto": "Victor Correia", "equipe": "McLaren", "incidente": "Corte de curvas", "punicao": "Aviso" },
+    { "tempo": "15:20.782", "volta": 9, "piloto": "Victor Correia", "equipe": "McLaren", "incidente": "Limites da pista excedidos", "punicao": "Aviso" },
+    { "tempo": "15:20.807", "volta": 9, "piloto": "Victor Correia", "equipe": "McLaren", "incidente": "Múltiplas advertências", "punicao": "3 segundo(s)" },
+    { "tempo": "15:26.092", "volta": 10, "piloto": "Tiago Sinatra", "equipe": "Mercedes-AMG Petronas", "incidente": "Corte de curvas", "punicao": "Aviso" },
+    { "tempo": "17:43.796", "volta": 11, "piloto": "Tiago Sinatra", "equipe": "Mercedes-AMG Petronas", "incidente": "Corte de curvas", "punicao": "Aviso" },
+    { "tempo": "19:13.572", "volta": 11, "piloto": "Victor Correia", "equipe": "McLaren", "incidente": "Corte de curvas", "punicao": "3 segundo(s)" },
+    { "tempo": "19:53.733", "volta": 13, "piloto": "Matheus Costa", "equipe": "Williams", "incidente": "Limites da pista excedidos", "punicao": "Aviso" },
+    { "tempo": "21:28.661", "volta": 14, "piloto": "Alysson Litz", "equipe": "Scuderia Ferrari HP", "incidente": "Corte de curvas", "punicao": "Aviso" },
+    { "tempo": "21:43.435", "volta": 13, "piloto": "Victor Correia", "equipe": "McLaren", "incidente": "Limites da pista excedidos", "punicao": "Aviso" },
+    { "tempo": "21:46.035", "volta": 13, "piloto": "Leonardo Fujimura", "equipe": "Red Bull", "incidente": "Limites da pista excedidos", "punicao": "Aviso" },
+    { "tempo": "22:16.461", "volta": 14, "piloto": "Matheus Costa", "equipe": "Williams", "incidente": "Limites da pista excedidos", "punicao": "Aviso" },
+    { "tempo": "22:16.479", "volta": 14, "piloto": "Matheus Costa", "equipe": "Williams", "incidente": "Múltiplas advertências", "punicao": "3 segundo(s)" },
+    { "tempo": "22:30.563", "volta": 13, "piloto": "Tiago Sinatra", "equipe": "Mercedes-AMG Petronas", "incidente": "Corte de curvas", "punicao": "Aviso" },
+    { "tempo": "22:30.619", "volta": 13, "piloto": "Tiago Sinatra", "equipe": "Mercedes-AMG Petronas", "incidente": "Múltiplas advertências", "punicao": "3 segundo(s)" },
+    { "tempo": "22:46.749", "volta": 13, "piloto": "Leonardo Fujimura", "equipe": "Red Bull", "incidente": "Corte de curvas", "punicao": "Aviso" },
+    { "tempo": "22:46.756", "volta": 13, "piloto": "Leonardo Fujimura", "equipe": "Red Bull", "incidente": "Múltiplas advertências", "punicao": "3 segundo(s)" }
+  ],
+  "linkReplay": "replays/pato-gp-f1-2025/06-miami.frr"
 }
