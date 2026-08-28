@@ -67,39 +67,43 @@ const base = import.meta.env.BASE_URL;
       <div class="pr-standings">
         <div>
           <h3>Pilotos</h3>
-          <table class="pr-table">
-            <thead>
-              <tr><th>#</th><th>Piloto</th><th>Equipe</th><th>Pontos</th></tr>
-            </thead>
-            <tbody>
-              {classificacaoPilotos.map((p, i) => (
-                <tr>
-                  <td>{i + 1}</td>
-                  <td>{p.piloto}</td>
-                  <td>{p.equipe ?? '—'}</td>
-                  <td>{p.pontos}</td>
-                </tr>
-              ))}
-            </tbody>
-          </table>
-        </div>
-        {classificacaoEquipes.length > 0 && (
-          <div>
-            <h3>Equipes</h3>
+          <div class="pr-table-wrap">
             <table class="pr-table">
               <thead>
-                <tr><th>#</th><th>Equipe</th><th>Pontos</th></tr>
+                <tr><th>#</th><th>Piloto</th><th>Equipe</th><th>Pontos</th></tr>
               </thead>
               <tbody>
-                {classificacaoEquipes.map((e, i) => (
+                {classificacaoPilotos.map((p, i) => (
                   <tr>
                     <td>{i + 1}</td>
-                    <td>{e.equipe}</td>
-                    <td>{e.pontos}</td>
+                    <td>{p.piloto}</td>
+                    <td>{p.equipe ?? '—'}</td>
+                    <td>{p.pontos}</td>
                   </tr>
                 ))}
               </tbody>
             </table>
+          </div>
+        </div>
+        {classificacaoEquipes.length > 0 && (
+          <div>
+            <h3>Equipes</h3>
+            <div class="pr-table-wrap">
+              <table class="pr-table">
+                <thead>
+                  <tr><th>#</th><th>Equipe</th><th>Pontos</th></tr>
+                </thead>
+                <tbody>
+                  {classificacaoEquipes.map((e, i) => (
+                    <tr>
+                      <td>{i + 1}</td>
+                      <td>{e.equipe}</td>
+                      <td>{e.pontos}</td>
+                    </tr>
+                  ))}
+                </tbody>
+              </table>
+            </div>
           </div>
         )}
       </div>

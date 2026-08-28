@@ -90,4 +90,42 @@ const recordeComunidade = recorde && {
       </div>
     )}
   </section>
+
+  <style>
+    .pr-etapa-hero {
+      background: var(--pr-bg-elevated);
+      border-bottom: 1px solid var(--pr-border);
+    }
+
+    .pr-etapa-hero__inner {
+      display: flex;
+      align-items: center;
+      gap: var(--pr-space-lg);
+      padding-block: var(--pr-space-xl);
+    }
+
+    .pr-etapa-hero__flag {
+      font-size: 3.5rem;
+      flex-shrink: 0;
+      border-radius: 4px;
+      box-shadow: 0 0 0 1px var(--pr-border);
+    }
+
+    .pr-etapa-grid {
+      display: grid;
+      grid-template-columns: 1.1fr 1fr;
+      gap: var(--pr-space-xl);
+      align-items: stretch;
+    }
+
+    @media (max-width: 800px) {
+      .pr-etapa-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    .pr-etapa-image {
+      min-height: 220px;
+    }
+  </style>
 </Layout>
