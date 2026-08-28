@@ -34,7 +34,10 @@ const nav = [
   <body>
     <header class="pr-header">
       <div class="pr-container pr-header__inner">
-        <a href={import.meta.env.BASE_URL} class="pr-header__brand">🦆 PATO RACING</a>
+        <a href={import.meta.env.BASE_URL} class="pr-header__brand">
+          <img src={`${import.meta.env.BASE_URL}images/logo.png`} alt="Pato Racing" class="pr-header__logo" />
+          PATO RACING
+        </a>
         <nav class="pr-header__nav">
           {nav.map((item) => (
             <a href={`${import.meta.env.BASE_URL}${item.href.replace(/^\//, '')}`}>{item.label}</a>
@@ -72,11 +75,19 @@ const nav = [
       }
 
       .pr-header__brand {
+        display: flex;
+        align-items: center;
+        gap: var(--pr-space-sm);
         font-family: var(--pr-font-display);
         font-weight: 700;
         font-size: 1.4rem;
         letter-spacing: 0.03em;
         color: var(--pr-text);
+      }
+
+      .pr-header__logo {
+        height: 2.2rem;
+        width: auto;
       }
 
       .pr-header__brand:hover {
