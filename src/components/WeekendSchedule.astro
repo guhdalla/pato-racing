@@ -44,24 +44,26 @@ const timeFormatter = new Intl.DateTimeFormat('pt-BR', {
 });
 ---
 
-<table class="pr-table">
-  <thead>
-    <tr>
-      <th>Sessão</th>
-      <th>Data</th>
-      <th>Horário (Brasília)</th>
-    </tr>
-  </thead>
-  <tbody>
-    {ordered.map((s) => (
-      <tr class={s.tipo === 'corrida' ? 'pr-table__row--race' : ''}>
-        <td>{labels[s.tipo] ?? s.tipo}</td>
-        <td>{dateFormatter.format(s.dataHora)}</td>
-        <td>{timeFormatter.format(s.dataHora)}</td>
+<div class="pr-table-wrap">
+  <table class="pr-table">
+    <thead>
+      <tr>
+        <th>Sessão</th>
+        <th>Data</th>
+        <th>Horário (Brasília)</th>
       </tr>
-    ))}
-  </tbody>
-</table>
+    </thead>
+    <tbody>
+      {ordered.map((s) => (
+        <tr class={s.tipo === 'corrida' ? 'pr-table__row--race' : ''}>
+          <td>{labels[s.tipo] ?? s.tipo}</td>
+          <td>{dateFormatter.format(s.dataHora)}</td>
+          <td>{timeFormatter.format(s.dataHora)}</td>
+        </tr>
+      ))}
+    </tbody>
+  </table>
+</div>
 
 <style>
   .pr-table__row--race td:first-child {

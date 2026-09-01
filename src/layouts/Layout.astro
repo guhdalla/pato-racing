@@ -29,12 +29,23 @@ const nav = [
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>{title} · Pato Racing Hub</title>
     <meta name="description" content={description} />
-    <link rel="icon" href={`${import.meta.env.BASE_URL}favicon.svg`} type="image/svg+xml" />
+    <link rel="icon" href={`${import.meta.env.BASE_URL}images/favicon-32.png`} sizes="32x32" type="image/png" />
+    <link rel="icon" href={`${import.meta.env.BASE_URL}images/favicon-512.png`} sizes="512x512" type="image/png" />
+    <link rel="apple-touch-icon" href={`${import.meta.env.BASE_URL}images/favicon-180.png`} />
   </head>
   <body>
     <header class="pr-header">
       <div class="pr-container pr-header__inner">
-        <a href={import.meta.env.BASE_URL} class="pr-header__brand">🦆 PATO RACING</a>
+        <a href={import.meta.env.BASE_URL} class="pr-header__brand">
+          <img src={`${import.meta.env.BASE_URL}images/logo.png`} alt="Pato Racing" class="pr-header__logo" />
+          PATO RACING
+        </a>
+        <input type="checkbox" id="pr-nav-toggle" class="pr-header__nav-toggle" />
+        <label for="pr-nav-toggle" class="pr-header__nav-btn" aria-label="Abrir menu de navegação">
+          <span></span>
+          <span></span>
+          <span></span>
+        </label>
         <nav class="pr-header__nav">
           {nav.map((item) => (
             <a href={`${import.meta.env.BASE_URL}${item.href.replace(/^\//, '')}`}>{item.label}</a>
@@ -69,14 +80,23 @@ const nav = [
         gap: var(--pr-space-md);
         padding-block: var(--pr-space-md);
         flex-wrap: wrap;
+        position: relative;
       }
 
       .pr-header__brand {
+        display: flex;
+        align-items: center;
+        gap: var(--pr-space-sm);
         font-family: var(--pr-font-display);
         font-weight: 700;
         font-size: 1.4rem;
         letter-spacing: 0.03em;
         color: var(--pr-text);
+      }
+
+      .pr-header__logo {
+        height: 2.2rem;
+        width: auto;
       }
 
       .pr-header__brand:hover {
@@ -87,7 +107,6 @@ const nav = [
       .pr-header__nav {
         display: flex;
         gap: var(--pr-space-lg);
-        flex-wrap: wrap;
       }
 
       .pr-header__nav a {
@@ -102,6 +121,70 @@ const nav = [
       .pr-header__nav a:hover {
         color: var(--pr-red);
         text-decoration: none;
+      }
+
+      .pr-header__nav-toggle {
+        position: absolute;
+        width: 1px;
+        height: 1px;
+        margin: -1px;
+        padding: 0;
+        overflow: hidden;
+        clip: rect(0, 0, 0, 0);
+        white-space: nowrap;
+        border: 0;
+      }
+
+      .pr-header__nav-btn {
+        display: none;
+        flex-direction: column;
+        justify-content: center;
+        gap: 5px;
+        width: 2.5rem;
+        height: 2.5rem;
+        padding: 0.5rem;
+        border-radius: var(--pr-radius);
+        cursor: pointer;
+      }
+
+      .pr-header__nav-btn:hover {
+        background: var(--pr-surface);
+      }
+
+      .pr-header__nav-btn span {
+        display: block;
+        height: 2px;
+        border-radius: 2px;
+        background: var(--pr-text);
+      }
+
+      .pr-header__nav-toggle:focus-visible ~ .pr-header__nav-btn {
+        outline: 2px solid var(--pr-red);
+        outline-offset: 2px;
+      }
+
+      @media (max-width: 720px) {
+        .pr-header__nav-btn {
+          display: flex;
+        }
+
+        .pr-header__nav {
+          display: none;
+          width: 100%;
+          flex-direction: column;
+          gap: 0;
+          order: 3;
+        }
+
+        .pr-header__nav-toggle:checked ~ .pr-header__nav {
+          display: flex;
+        }
+
+        .pr-header__nav a {
+          width: 100%;
+          padding: var(--pr-space-sm) 0;
+          border-top: 1px solid var(--pr-border);
+        }
       }
 
       .pr-footer {

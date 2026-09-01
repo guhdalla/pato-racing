@@ -153,8 +153,15 @@ p {
   text-decoration: none;
 }
 
+.pr-table-wrap {
+  width: 100%;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+}
+
 table.pr-table {
   width: 100%;
+  min-width: 480px;
   border-collapse: collapse;
   font-family: var(--pr-font-body);
 }
@@ -190,7 +197,9 @@ table.pr-table th {
 }
 
 .pr-card__image {
+  width: 100%;
   aspect-ratio: 16 / 9;
+  overflow: hidden;
 }
 
 .pr-card__body {
