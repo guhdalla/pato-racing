@@ -61,7 +61,8 @@ Campos obrigatórios:
 2. Mude `status` para `"concluida"`.
 3. Preencha (todos opcionais, adicione o que tiver):
    - `resultadoClassificacao`: lista de `{ posicao, piloto, equipe, tempo }`
-   - `resultadoCorrida`: lista de `{ posicao, piloto, equipe, pontos, voltaMaisRapida, status }`
+   - `resultadoCorrida`: lista de `{ posicao, piloto, equipe, pontos, voltaMaisRapida, melhorVolta, status }`
+     — `melhorVolta` é a melhor volta individual do piloto na corrida (ex.: `"1:19.558"`), opcional.
      — o campo `pontos` é o que alimenta a **classificação geral automática** do campeonato,
      preencha com o valor já definido conforme `sistemaPontuacao`/`pontosSprint` do campeonato.
    - `poleposition`, `voltaMaisRapida`, `podio` (lista com até 3 nomes), `linkTransmissao`, `linkReplay`, `observacoes`

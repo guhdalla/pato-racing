@@ -19,11 +19,11 @@
     }
   ],
   "resultadoCorrida": [
-    { "posicao": 1, "piloto": "Alysson Litz", "equipe": "Red Bull", "pontos": 25 },
-    { "posicao": 2, "piloto": "Gustavo Dalla", "equipe": "Red Bull", "pontos": 18 },
-    { "posicao": 3, "piloto": "Victor Correia", "equipe": "McLaren", "pontos": 15 },
-    { "posicao": 4, "piloto": "Matheus Costa", "equipe": "Williams", "pontos": 12, "voltaMaisRapida": true },
-    { "posicao": 5, "piloto": "Tiago Sinatra", "equipe": "Mercedes-AMG Petronas", "pontos": 10 }
+    { "posicao": 1, "piloto": "Alysson Litz", "equipe": "Red Bull", "pontos": 25, "melhorVolta": "1:37.145" },
+    { "posicao": 2, "piloto": "Gustavo Dalla", "equipe": "Red Bull", "pontos": 18, "melhorVolta": "1:37.234" },
+    { "posicao": 3, "piloto": "Victor Correia", "equipe": "McLaren", "pontos": 15, "melhorVolta": "1:37.838" },
+    { "posicao": 4, "piloto": "Matheus Costa", "equipe": "Williams", "pontos": 12, "voltaMaisRapida": true, "melhorVolta": "1:36.898" },
+    { "posicao": 5, "piloto": "Tiago Sinatra", "equipe": "Mercedes-AMG Petronas", "pontos": 10, "melhorVolta": "1:40.918" }
   ],
   "poleposition": "Alysson Litz",
   "voltaMaisRapida": "Matheus Costa (1:36.898)",
