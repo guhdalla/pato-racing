@@ -90,6 +90,7 @@ const etapas = defineCollection({
           pontos: z.number(),
           voltaMaisRapida: z.boolean().optional(),
           melhorVolta: z.string().optional(),
+          tempo: z.string().optional(),
           status: z.string().optional(),
         })
       )

@@ -19,13 +19,13 @@
     }
   ],
   "resultadoCorrida": [
-    { "posicao": 1, "piloto": "Paulo Henrique", "equipe": "Scuderia Ferrari HP", "pontos": 25, "voltaMaisRapida": true, "melhorVolta": "1:30.325" },
-    { "posicao": 2, "piloto": "Gustavo Dalla", "equipe": "Red Bull", "pontos": 18, "melhorVolta": "1:36.177" },
-    { "posicao": 3, "piloto": "Iury Crespo", "equipe": "Mercedes-AMG Petronas", "pontos": 15, "melhorVolta": "1:37.701" },
-    { "posicao": 4, "piloto": "Nathan Barros", "equipe": "KICK Sauber", "pontos": 12, "melhorVolta": "1:37.293" },
-    { "posicao": 5, "piloto": "Victor Correia", "equipe": "McLaren", "pontos": 10, "melhorVolta": "1:38.457" },
-    { "posicao": 6, "piloto": "Leonardo Araujo", "equipe": "McLaren", "pontos": 8, "melhorVolta": "1:39.504" },
-    { "posicao": 7, "piloto": "Tiago Sinatra", "equipe": "Mercedes-AMG Petronas", "pontos": 6, "melhorVolta": "1:39.873" }
+    { "posicao": 1, "piloto": "Paulo Henrique", "equipe": "Scuderia Ferrari HP", "pontos": 25, "voltaMaisRapida": true, "melhorVolta": "1:30.325", "tempo": "20:53.823" },
+    { "posicao": 2, "piloto": "Gustavo Dalla", "equipe": "Red Bull", "pontos": 18, "melhorVolta": "1:36.177", "tempo": "+50.168" },
+    { "posicao": 3, "piloto": "Iury Crespo", "equipe": "Mercedes-AMG Petronas", "pontos": 15, "melhorVolta": "1:37.701", "tempo": "+55.722" },
+    { "posicao": 4, "piloto": "Nathan Barros", "equipe": "KICK Sauber", "pontos": 12, "melhorVolta": "1:37.293", "tempo": "+1:34.005" },
+    { "posicao": 5, "piloto": "Victor Correia", "equipe": "McLaren", "pontos": 10, "melhorVolta": "1:38.457", "tempo": "+ 1 volta" },
+    { "posicao": 6, "piloto": "Leonardo Araujo", "equipe": "McLaren", "pontos": 8, "melhorVolta": "1:39.504", "tempo": "+ 1 volta" },
+    { "posicao": 7, "piloto": "Tiago Sinatra", "equipe": "Mercedes-AMG Petronas", "pontos": 6, "melhorVolta": "1:39.873", "tempo": "+ 1 volta" }
   ],
   "poleposition": "Paulo Henrique",
   "voltaMaisRapida": "Paulo Henrique (1:30.325)",
