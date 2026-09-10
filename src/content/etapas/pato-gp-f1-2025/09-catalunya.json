@@ -3,7 +3,7 @@
   "rodada": 9,
   "circuitoId": "catalunya",
   "formatoFimDeSemana": "normal",
-  "status": "agendada",
+  "status": "concluida",
   "sessoes": [
     {
       "tipo": "treino-livre-1",
@@ -17,5 +17,29 @@
       "tipo": "corrida",
       "dataHora": "2026-09-10T01:15:00Z"
     }
-  ]
+  ],
+  "resultadoCorrida": [
+    { "posicao": 1, "piloto": "Paulo Henrique", "equipe": "Scuderia Ferrari HP", "pontos": 25, "voltaMaisRapida": true, "melhorVolta": "1:15.699", "tempo": "22:20.833" },
+    { "posicao": 2, "piloto": "Julio Cesar", "equipe": "Aston Martin", "pontos": 18, "melhorVolta": "1:17.752", "tempo": "+21.488" },
+    { "posicao": 3, "piloto": "Gustavo Dalla", "equipe": "Red Bull", "pontos": 15, "melhorVolta": "1:17.018", "tempo": "+21.919" },
+    { "posicao": 4, "piloto": "Renan Lima", "equipe": "KICK Sauber", "pontos": 12, "melhorVolta": "1:17.883", "tempo": "+29.755" },
+    { "posicao": 5, "piloto": "Matheus Costa", "equipe": "Williams", "pontos": 10, "melhorVolta": "1:19.551", "tempo": "+50.156" },
+    { "posicao": 6, "piloto": "Tiago Sinatra", "equipe": "Mercedes-AMG Petronas", "pontos": 8, "melhorVolta": "1:20.355", "tempo": "+1:21.552" },
+    { "posicao": 7, "piloto": "Alysson Litz", "equipe": "Scuderia Ferrari HP", "pontos": 6, "melhorVolta": "1:18.555", "tempo": "+ 1 volta" },
+    { "posicao": 8, "piloto": "Leonardo Araujo", "equipe": "McLaren", "pontos": 4, "melhorVolta": "1:19.941", "tempo": "+ 1 volta" },
+    { "posicao": 9, "piloto": "Breno Bastos", "equipe": "Red Bull", "pontos": 2, "melhorVolta": "1:18.531", "tempo": "+ 1 volta" },
+    { "posicao": 10, "piloto": "Victor Correia", "equipe": "McLaren", "pontos": 1, "melhorVolta": "1:20.446", "tempo": "+ 2 voltas" }
+  ],
+  "poleposition": "Gustavo Dalla",
+  "voltaMaisRapida": "Paulo Henrique (1:15.699)",
+  "podio": ["Paulo Henrique", "Julio Cesar", "Gustavo Dalla"],
+  "punicoes": [
+    { "volta": 1, "piloto": "Alysson Litz", "equipe": "Scuderia Ferrari HP", "incidente": "Queimou largada", "punicao": "Punição de drive through" },
+    { "volta": 1, "piloto": "Alysson Litz", "equipe": "Scuderia Ferrari HP", "incidente": "Queimou largada", "punicao": "Tempo de volta inválido" },
+    { "tempo": "13:18.650", "volta": 9, "piloto": "Victor Correia", "equipe": "McLaren", "incidente": "Corte de curvas", "punicao": "Aviso" },
+    { "tempo": "14:53.644", "volta": 10, "piloto": "Victor Correia", "equipe": "McLaren", "incidente": "Limites da pista excedidos", "punicao": "Aviso" },
+    { "tempo": "19:03.137", "volta": 13, "piloto": "Victor Correia", "equipe": "McLaren", "incidente": "Corte de curvas", "punicao": "Aviso" },
+    { "tempo": "19:03.153", "volta": 13, "piloto": "Victor Correia", "equipe": "McLaren", "incidente": "Múltiplas advertências", "punicao": "3 segundo(s)" }
+  ],
+  "linkReplay": "replays/pato-gp-f1-2025/09-catalunya.frr"
 }
