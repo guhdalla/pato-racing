@@ -3,7 +3,7 @@
   "rodada": 10,
   "circuitoId": "montreal",
   "formatoFimDeSemana": "normal",
-  "status": "agendada",
+  "status": "concluida",
   "sessoes": [
     {
       "tipo": "treino-livre-1",
@@ -17,5 +17,21 @@
       "tipo": "corrida",
       "dataHora": "2026-09-15T01:15:00Z"
     }
-  ]
+  ],
+  "resultadoCorrida": [
+    { "posicao": 1, "piloto": "Paulo Henrique", "equipe": "Scuderia Ferrari HP", "pontos": 25, "voltaMaisRapida": true, "melhorVolta": "1:14.108" },
+    { "posicao": 2, "piloto": "Julio Cesar", "equipe": "Aston Martin", "pontos": 18, "melhorVolta": "1:14.893" },
+    { "posicao": 3, "piloto": "Gustavo Dalla", "equipe": "Red Bull", "pontos": 15, "melhorVolta": "1:16.029" },
+    { "posicao": 4, "piloto": "Matheus Costa", "equipe": "Alpine", "pontos": 12, "melhorVolta": "1:15.898" },
+    { "posicao": 5, "piloto": "Renan Lima", "equipe": "KICK Sauber", "pontos": 10, "melhorVolta": "1:15.924" },
+    { "posicao": 6, "piloto": "Leonardo Araujo", "equipe": "Scuderia Ferrari HP", "pontos": 8, "melhorVolta": "1:17.757" },
+    { "posicao": 7, "piloto": "Tiago Sinatra", "equipe": "Mercedes-AMG Petronas", "pontos": 6, "melhorVolta": "1:18.112" },
+    { "posicao": 8, "piloto": "Nathan Barros", "equipe": "KICK Sauber", "pontos": 4, "melhorVolta": "1:19.029" },
+    { "posicao": 9, "piloto": "Breno Bastos", "equipe": "Red Bull", "pontos": 2, "melhorVolta": "1:17.686" },
+    { "posicao": 10, "piloto": "Lucas Alvarez", "equipe": "Aston Martin", "pontos": 1, "melhorVolta": "1:19.691" },
+    { "posicao": 11, "piloto": "Victor Correia", "equipe": "McLaren", "pontos": 0, "melhorVolta": "1:16.984", "status": "DSQ" }
+  ],
+  "poleposition": "Paulo Henrique",
+  "voltaMaisRapida": "Paulo Henrique (1:14.108)",
+  "podio": ["Paulo Henrique", "Julio Cesar", "Gustavo Dalla"]
 }
