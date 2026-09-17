@@ -3,7 +3,7 @@
   "rodada": 11,
   "circuitoId": "red-bull-ring",
   "formatoFimDeSemana": "normal",
-  "status": "agendada",
+  "status": "concluida",
   "sessoes": [
     {
       "tipo": "treino-livre-1",
@@ -17,5 +17,23 @@
       "tipo": "corrida",
       "dataHora": "2026-09-17T01:15:00Z"
     }
+  ],
+  "resultadoCorrida": [
+    { "posicao": 1, "piloto": "Paulo Henrique", "equipe": "Scuderia Ferrari HP", "pontos": 25, "voltaMaisRapida": true, "melhorVolta": "1:07.539", "tempo": "21:15.440" },
+    { "posicao": 2, "piloto": "Julio Cesar", "equipe": "Aston Martin", "pontos": 18, "melhorVolta": "1:08.834", "tempo": "+6.169" },
+    { "posicao": 3, "piloto": "Gustavo Dalla", "equipe": "Red Bull", "pontos": 15, "melhorVolta": "1:08.932", "tempo": "+19.294" },
+    { "posicao": 4, "piloto": "Matheus Costa", "equipe": "Alpine", "pontos": 12, "melhorVolta": "1:09.510", "tempo": "+41.552" },
+    { "posicao": 5, "piloto": "Renan Lima", "equipe": "KICK Sauber", "pontos": 10, "melhorVolta": "1:09.218", "tempo": "+42.820" },
+    { "posicao": 6, "piloto": "Tiago Sinatra", "equipe": "Mercedes-AMG Petronas", "pontos": 8, "melhorVolta": "1:11.661", "tempo": "+1:07.400" },
+    { "posicao": 7, "piloto": "Breno Bastos", "equipe": "Aston Martin", "pontos": 6, "melhorVolta": "1:10.186", "tempo": "+1:20.655" },
+    { "posicao": 8, "piloto": "Lucas Alvarez", "equipe": "Williams", "pontos": 4, "melhorVolta": "1:13.406", "tempo": "+ 1 volta" }
+  ],
+  "poleposition": "Paulo Henrique",
+  "voltaMaisRapida": "Paulo Henrique (1:07.539)",
+  "podio": ["Paulo Henrique", "Julio Cesar", "Gustavo Dalla"],
+  "punicoes": [
+    { "tempo": "5:28.172", "volta": 5, "piloto": "Lucas Alvarez", "equipe": "Williams", "incidente": "Corte de curvas", "punicao": "3 segundo(s)" },
+    { "tempo": "15:32.715", "volta": 13, "piloto": "Tiago Sinatra", "equipe": "Mercedes-AMG Petronas", "incidente": "Limites da pista excedidos", "punicao": "Aviso" },
+    { "tempo": "17:58.525", "volta": 15, "piloto": "Tiago Sinatra", "equipe": "Mercedes-AMG Petronas", "incidente": "Limites da pista excedidos", "punicao": "Aviso" }
   ]
 }
