@@ -19,27 +19,27 @@
     }
   ],
   "resultadoCorrida": [
-    { "posicao": 1, "piloto": "Pessoa", "equipe": "Scuderia Ferrari HP", "pontos": 25, "voltaMaisRapida": true, "melhorVolta": "1:29.851", "tempo": "20:23.644" },
-    { "posicao": 2, "piloto": "Pessoa", "equipe": "Alpine", "pontos": 18, "melhorVolta": "1:32.186", "tempo": "+17.254" },
-    { "posicao": 3, "piloto": "Pessoa", "equipe": "Aston Martin", "pontos": 15, "melhorVolta": "1:32.387", "tempo": "+18.601" },
-    { "posicao": 4, "piloto": "yDalla", "equipe": "Red Bull", "pontos": 12, "melhorVolta": "1:31.990", "tempo": "+19.076" },
-    { "posicao": 5, "piloto": "Pessoa", "equipe": "Scuderia Ferrari HP", "pontos": 10, "melhorVolta": "1:34.901", "tempo": "+1:08.846" },
-    { "posicao": 6, "piloto": "Pessoa", "equipe": "KICK Sauber", "pontos": 8, "melhorVolta": "1:34.377", "tempo": "+1:12.521" },
-    { "posicao": 7, "piloto": "Pessoa", "equipe": "McLaren", "pontos": 6, "melhorVolta": "1:33.821", "tempo": "+1:24.191" },
-    { "posicao": 8, "piloto": "Pessoa", "equipe": "Mercedes-AMG Petronas", "pontos": 4, "melhorVolta": "1:35.497", "tempo": "+1:24.544" },
-    { "posicao": 9, "piloto": "Pessoa", "equipe": "KICK Sauber", "pontos": 2, "melhorVolta": "1:37.450", "tempo": "+ 1 volta" }
+    { "posicao": 1, "piloto": "Paulo Henrique", "equipe": "Scuderia Ferrari HP", "pontos": 25, "voltaMaisRapida": true, "melhorVolta": "1:29.851", "tempo": "20:23.644" },
+    { "posicao": 2, "piloto": "Matheus Costa", "equipe": "Alpine", "pontos": 18, "melhorVolta": "1:32.186", "tempo": "+17.254" },
+    { "posicao": 3, "piloto": "Julio Cesar", "equipe": "Aston Martin", "pontos": 15, "melhorVolta": "1:32.387", "tempo": "+18.601" },
+    { "posicao": 4, "piloto": "Gustavo Dalla", "equipe": "Red Bull", "pontos": 12, "melhorVolta": "1:31.990", "tempo": "+19.076" },
+    { "posicao": 5, "piloto": "Breno Bastos", "equipe": "Scuderia Ferrari HP", "pontos": 10, "melhorVolta": "1:34.901", "tempo": "+1:08.846" },
+    { "posicao": 6, "piloto": "Renan Lima", "equipe": "KICK Sauber", "pontos": 8, "melhorVolta": "1:34.377", "tempo": "+1:12.521" },
+    { "posicao": 7, "piloto": "Victor Correia", "equipe": "McLaren", "pontos": 6, "melhorVolta": "1:33.821", "tempo": "+1:24.191" },
+    { "posicao": 8, "piloto": "Tiago Sinatra", "equipe": "Mercedes-AMG Petronas", "pontos": 4, "melhorVolta": "1:35.497", "tempo": "+1:24.544" },
+    { "posicao": 9, "piloto": "Nathan Barros", "equipe": "KICK Sauber", "pontos": 2, "melhorVolta": "1:37.450", "tempo": "+ 1 volta" }
   ],
-  "poleposition": "Pessoa",
-  "voltaMaisRapida": "Pessoa (1:29.851)",
-  "podio": ["Pessoa", "Pessoa", "Pessoa"],
+  "poleposition": "Paulo Henrique",
+  "voltaMaisRapida": "Paulo Henrique (1:29.851)",
+  "podio": ["Paulo Henrique", "Matheus Costa", "Julio Cesar"],
   "punicoes": [
-    { "volta": 1, "piloto": "Pessoa", "equipe": "McLaren", "incidente": "Queimou largada", "punicao": "Punição de drive through" },
-    { "volta": 1, "piloto": "Pessoa", "equipe": "McLaren", "incidente": "Queimou largada", "punicao": "Tempo de volta inválido" },
-    { "volta": 1, "piloto": "Pessoa", "equipe": "KICK Sauber", "incidente": "Queimou largada", "punicao": "Punição de drive through" },
-    { "volta": 1, "piloto": "Pessoa", "equipe": "KICK Sauber", "incidente": "Queimou largada", "punicao": "Tempo de volta inválido" },
-    { "tempo": "3:23.627", "volta": 2, "piloto": "Pessoa", "equipe": "KICK Sauber", "incidente": "Corte de curvas", "punicao": "3 segundo(s)" },
-    { "tempo": "21:25.624", "volta": 13, "piloto": "Pessoa", "equipe": "Mercedes-AMG Petronas", "incidente": "Limites da pista excedidos", "punicao": "Punição de 10 segundo(s)" },
-    { "tempo": "21:27.927", "volta": 13, "piloto": "Pessoa", "equipe": "Mercedes-AMG Petronas", "incidente": "Corte de curvas", "punicao": "3 segundo(s)" },
-    { "tempo": "21:35.202", "volta": 13, "piloto": "Pessoa", "equipe": "Mercedes-AMG Petronas", "incidente": "Punição não cumprida", "punicao": "10 segundo(s)" }
+    { "volta": 1, "piloto": "Victor Correia", "equipe": "McLaren", "incidente": "Queimou largada", "punicao": "Punição de drive through" },
+    { "volta": 1, "piloto": "Victor Correia", "equipe": "McLaren", "incidente": "Queimou largada", "punicao": "Tempo de volta inválido" },
+    { "volta": 1, "piloto": "Nathan Barros", "equipe": "KICK Sauber", "incidente": "Queimou largada", "punicao": "Punição de drive through" },
+    { "volta": 1, "piloto": "Nathan Barros", "equipe": "KICK Sauber", "incidente": "Queimou largada", "punicao": "Tempo de volta inválido" },
+    { "tempo": "3:23.627", "volta": 2, "piloto": "Nathan Barros", "equipe": "KICK Sauber", "incidente": "Corte de curvas", "punicao": "3 segundo(s)" },
+    { "tempo": "21:25.624", "volta": 13, "piloto": "Tiago Sinatra", "equipe": "Mercedes-AMG Petronas", "incidente": "Limites da pista excedidos", "punicao": "Punição de 10 segundo(s)" },
+    { "tempo": "21:27.927", "volta": 13, "piloto": "Tiago Sinatra", "equipe": "Mercedes-AMG Petronas", "incidente": "Corte de curvas", "punicao": "3 segundo(s)" },
+    { "tempo": "21:35.202", "volta": 13, "piloto": "Tiago Sinatra", "equipe": "Mercedes-AMG Petronas", "incidente": "Punição não cumprida", "punicao": "10 segundo(s)" }
   ]
 }

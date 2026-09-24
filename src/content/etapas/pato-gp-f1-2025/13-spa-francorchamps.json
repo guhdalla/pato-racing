@@ -3,7 +3,7 @@
   "rodada": 13,
   "circuitoId": "spa-francorchamps",
   "formatoFimDeSemana": "sprint",
-  "status": "agendada",
+  "status": "concluida",
   "sessoes": [
     {
       "tipo": "treino-livre-1",
@@ -25,5 +25,23 @@
       "tipo": "corrida",
       "dataHora": "2026-09-24T02:15:00Z"
     }
+  ],
+  "resultadoCorrida": [
+    { "posicao": 1, "piloto": "Paulo Henrique", "equipe": "Scuderia Ferrari HP", "pontos": 25, "voltaMaisRapida": true, "melhorVolta": "1:46.855", "tempo": "27:53.027" },
+    { "posicao": 2, "piloto": "Gustavo Dalla", "equipe": "Red Bull", "pontos": 18, "melhorVolta": "1:48.860", "tempo": "+3.560" },
+    { "posicao": 3, "piloto": "Julio Cesar", "equipe": "Aston Martin", "pontos": 15, "melhorVolta": "1:49.089", "tempo": "+12.509" },
+    { "posicao": 4, "piloto": "Matheus Costa", "equipe": "Alpine", "pontos": 12, "melhorVolta": "1:48.390", "tempo": "+13.942" },
+    { "posicao": 5, "piloto": "Renan Lima", "equipe": "KICK Sauber", "pontos": 10, "melhorVolta": "1:50.599", "tempo": "+37.179" },
+    { "posicao": 6, "piloto": "Tiago Sinatra", "equipe": "Mercedes-AMG Petronas", "pontos": 8, "melhorVolta": "1:52.215", "tempo": "+1:19.302" },
+    { "posicao": 7, "piloto": "Lucas Alvarez", "equipe": "Visa Cash App Racing Bulls", "pontos": 6, "melhorVolta": "1:55.356", "tempo": "+ 1 volta" }
+  ],
+  "poleposition": "Paulo Henrique",
+  "voltaMaisRapida": "Paulo Henrique (1:46.855)",
+  "podio": ["Paulo Henrique", "Gustavo Dalla", "Julio Cesar"],
+  "punicoes": [
+    { "tempo": "7:52.247", "volta": 4, "piloto": "Lucas Alvarez", "equipe": "Visa Cash App Racing Bulls", "incidente": "Corte de curvas", "punicao": "3 segundo(s)" },
+    { "tempo": "10:13.541", "volta": 6, "piloto": "Tiago Sinatra", "equipe": "Mercedes-AMG Petronas", "incidente": "Corte de curvas", "punicao": "Aviso" },
+    { "tempo": "20:46.472", "volta": 11, "piloto": "Renan Lima", "equipe": "KICK Sauber", "incidente": "Corte de curvas", "punicao": "3 segundo(s)" },
+    { "tempo": "25:46.552", "volta": 13, "piloto": "Lucas Alvarez", "equipe": "Visa Cash App Racing Bulls", "incidente": "Limites da pista excedidos", "punicao": "Aviso" }
   ]
 }
