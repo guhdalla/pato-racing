@@ -1,0 +1,53 @@
+{
+  "titulo": "Demolir",
+  "jogo": "F1 25",
+  "temporada": 2026,
+  "status": "agendado",
+  "descricao": "Inspirado na série da Netflix sobre o herói da justiça, o Demolir é um campeonato de F1 25 com regulamento realista reduzido e carros desiguais, divididos nas categorias C, B e A. 15 etapas em pistas de alta velocidade, técnicas e fechadas — quem vai fazer justiça na pista?",
+  "regulamentoTexto": "Regulamento realista reduzido, com carros do F1 25 que NÃO são iguais, divididos em três categorias. Categoria C (fim do grid): Alpine, Kick Sauber e Haas — falta de pressão aerodinâmica, subesterço e resposta lenta; Alpine: Paulo Henrique. Categoria B (meio do grid): Aston Martin, Williams e Racing Bulls — carros honestos, que brigam por pontos se o setup for bem acertado; Aston Martin: Gustavo Dalla e Julio Cesar; Williams: Matheus Costa e Ranan Lima; Racing Bulls: Breno Bastos. Categoria A (topo do grid): Ferrari, Mercedes, Red Bull Racing e McLaren — carros de ponta, usados pelos demais pilotos. Calendário de 15 etapas em 15 circuitos: 5 de alta velocidade (Monza, Spa-Francorchamps, Silverstone, Jeddah e Las Vegas), 5 técnicos de curvas médias e rápidas (Suzuka, Interlagos, Zandvoort, Catalunya e Austin) e 5 fechados/travados (Mônaco, Marina Bay, Hungaroring, Montreal e Albert Park), para equilibrar as forças dos carros. Formato de fim de semana: treino livre único de no máximo 30 minutos + classificação curta + corrida. Distância de corrida: 25% da distância original de cada Grande Prêmio. Corridas às quartas-feiras, com treino livre a partir das 21h (horário de Brasília). Assistências: direção e freio assistidos desligados; freio ABS permitido; controle de tração completo permitido; assistência de boxes, DRS e ERS ativadas. Danos e penalidades de simulador ativados. Regras detalhadas de conduta serão publicadas no Discord da comunidade antes da primeira etapa.",
+  "sistemaPontuacao": [
+    {
+      "posicao": 1,
+      "pontos": 25
+    },
+    {
+      "posicao": 2,
+      "pontos": 18
+    },
+    {
+      "posicao": 3,
+      "pontos": 15
+    },
+    {
+      "posicao": 4,
+      "pontos": 12
+    },
+    {
+      "posicao": 5,
+      "pontos": 10
+    },
+    {
+      "posicao": 6,
+      "pontos": 8
+    },
+    {
+      "posicao": 7,
+      "pontos": 6
+    },
+    {
+      "posicao": 8,
+      "pontos": 4
+    },
+    {
+      "posicao": 9,
+      "pontos": 2
+    },
+    {
+      "posicao": 10,
+      "pontos": 1
+    }
+  ],
+  "pontosVoltaMaisRapida": 1,
+  "dataInicio": "2026-10-15T00:00:00Z",
+  "dataFim": "2027-01-21T02:15:00Z"
+}

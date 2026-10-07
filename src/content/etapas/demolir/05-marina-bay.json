@@ -1,0 +1,21 @@
+{
+  "campeonatoId": "demolir",
+  "rodada": 5,
+  "circuitoId": "marina-bay",
+  "formatoFimDeSemana": "normal",
+  "status": "agendada",
+  "sessoes": [
+    {
+      "tipo": "treino-livre-1",
+      "dataHora": "2026-11-12T00:00:00Z"
+    },
+    {
+      "tipo": "classificacao",
+      "dataHora": "2026-11-12T00:45:00Z"
+    },
+    {
+      "tipo": "corrida",
+      "dataHora": "2026-11-12T01:15:00Z"
+    }
+  ]
+}
