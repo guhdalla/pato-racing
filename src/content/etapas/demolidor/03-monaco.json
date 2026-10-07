@@ -1,21 +1,21 @@
 {
   "campeonatoId": "demolidor",
-  "rodada": 2,
+  "rodada": 3,
   "circuitoId": "monaco",
   "formatoFimDeSemana": "normal",
   "status": "agendada",
   "sessoes": [
     {
       "tipo": "treino-livre-1",
-      "dataHora": "2026-10-22T00:00:00Z"
+      "dataHora": "2026-10-29T00:00:00Z"
     },
     {
       "tipo": "classificacao",
-      "dataHora": "2026-10-22T00:45:00Z"
+      "dataHora": "2026-10-29T00:45:00Z"
     },
     {
       "tipo": "corrida",
-      "dataHora": "2026-10-22T01:15:00Z"
+      "dataHora": "2026-10-29T01:15:00Z"
     }
   ]
 }

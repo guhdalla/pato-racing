@@ -1,21 +1,21 @@
 {
   "campeonatoId": "demolidor",
-  "rodada": 10,
-  "circuitoId": "jeddah",
+  "rodada": 2,
+  "circuitoId": "suzuka",
   "formatoFimDeSemana": "normal",
   "status": "agendada",
   "sessoes": [
     {
       "tipo": "treino-livre-1",
-      "dataHora": "2026-12-17T00:00:00Z"
+      "dataHora": "2026-10-22T00:00:00Z"
     },
     {
       "tipo": "classificacao",
-      "dataHora": "2026-12-17T00:45:00Z"
+      "dataHora": "2026-10-22T00:45:00Z"
     },
     {
       "tipo": "corrida",
-      "dataHora": "2026-12-17T01:15:00Z"
+      "dataHora": "2026-10-22T01:15:00Z"
     }
   ]
 }
