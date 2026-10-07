@@ -34,6 +34,5 @@
     { "tempo": "14:32.016", "volta": 10, "piloto": "Leonardo Araujo", "equipe": "McLaren", "incidente": "Corte de curvas", "punicao": "Aviso" },
     { "tempo": "21:42.049", "volta": 13, "piloto": "Nathan Barros", "equipe": "KICK Sauber", "incidente": "Corte de curvas", "punicao": "Aviso" },
     { "tempo": "21:51.258", "volta": 13, "piloto": "Nathan Barros", "equipe": "KICK Sauber", "incidente": "Corte de curvas", "punicao": "3 segundos" }
-  ],
-  "linkReplay": "replays/pato-gp-f1-2025/01-albert-park.frr"
+  ]
 }

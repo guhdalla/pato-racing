@@ -38,6 +38,5 @@
     { "tempo": "7:58.069", "volta": 5, "piloto": "Leonardo Araujo", "equipe": "McLaren", "incidente": "Corte de curvas", "punicao": "Aviso" },
     { "tempo": "12:03.422", "volta": 7, "piloto": "Leonardo Araujo", "equipe": "McLaren", "incidente": "Corte de curvas", "punicao": "Aviso" },
     { "tempo": "19:19.119", "volta": 11, "piloto": "Leonardo Araujo", "equipe": "McLaren", "incidente": "Corte de curvas", "punicao": "3 segundo(s)" }
-  ],
-  "linkReplay": "replays/pato-gp-f1-2025/03-suzuka.frr"
+  ]
 }

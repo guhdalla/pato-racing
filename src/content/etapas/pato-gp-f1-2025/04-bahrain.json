@@ -37,6 +37,5 @@
     { "tempo": "11:28.911", "volta": 7, "piloto": "Iury Crespo", "equipe": "Mercedes-AMG Petronas", "incidente": "Corte de curvas", "punicao": "3 segundo(s)" },
     { "tempo": "18:20.940", "volta": 11, "piloto": "Leonardo Araujo", "equipe": "Scuderia Ferrari HP", "incidente": "Limites da pista excedidos", "punicao": "Aviso" },
     { "tempo": "22:56.232", "volta": 14, "piloto": "Iury Crespo", "equipe": "Mercedes-AMG Petronas", "incidente": "Corte de curvas", "punicao": "Aviso" }
-  ],
-  "linkReplay": "replays/pato-gp-f1-2025/04-bahrain.frr"
+  ]
 }

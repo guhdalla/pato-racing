@@ -51,6 +51,5 @@
     { "tempo": "20:11.808", "volta": 13, "piloto": "Alysson Litz", "equipe": "Red Bull", "incidente": "Corte de curvas", "punicao": "Aviso" },
     { "tempo": "20:11.825", "volta": 13, "piloto": "Alysson Litz", "equipe": "Red Bull", "incidente": "Múltiplas advertências", "punicao": "3 segundo(s)" },
     { "tempo": "20:58.788", "volta": 13, "piloto": "Alysson Litz", "equipe": "Red Bull", "incidente": "Corte de curvas", "punicao": "Aviso" }
-  ],
-  "linkReplay": "replays/pato-gp-f1-2025/05-jeddah.frr"
+  ]
 }

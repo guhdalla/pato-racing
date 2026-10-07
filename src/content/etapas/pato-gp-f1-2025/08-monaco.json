@@ -78,6 +78,5 @@
     { "tempo": "26:38.139", "volta": 18, "piloto": "Victor Correia", "equipe": "McLaren", "incidente": "Corte de curvas", "punicao": "Aviso" },
     { "tempo": "26:50.808", "volta": 20, "piloto": "Renan Lima", "equipe": "KICK Sauber", "incidente": "Limites da pista excedidos", "punicao": "Aviso" },
     { "tempo": "26:50.882", "volta": 19, "piloto": "Tiago Sinatra", "equipe": "Mercedes-AMG Petronas", "incidente": "Corte de curvas", "punicao": "Aviso" }
-  ],
-  "linkReplay": "replays/pato-gp-f1-2025/08-monaco.frr"
+  ]
 }

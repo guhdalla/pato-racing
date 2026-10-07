@@ -76,6 +76,5 @@
     { "tempo": "19:10.584", "volta": 14, "piloto": "Julio Cesar", "equipe": "Aston Martin", "incidente": "Limites da pista excedidos", "punicao": "Aviso" },
     { "tempo": "19:31.055", "volta": 14, "piloto": "Alysson Litz", "equipe": "Scuderia Ferrari HP", "incidente": "Limites da pista excedidos", "punicao": "Aviso" },
     { "tempo": "19:34.780", "volta": 14, "piloto": "Breno Bastos", "equipe": "Red Bull", "incidente": "Corte de curvas", "punicao": "3 segundo(s)" }
-  ],
-  "linkReplay": "replays/pato-gp-f1-2025/07-imola.frr"
+  ]
 }

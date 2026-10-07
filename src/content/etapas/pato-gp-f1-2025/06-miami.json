@@ -69,6 +69,5 @@
     { "tempo": "22:30.619", "volta": 13, "piloto": "Tiago Sinatra", "equipe": "Mercedes-AMG Petronas", "incidente": "Múltiplas advertências", "punicao": "3 segundo(s)" },
     { "tempo": "22:46.749", "volta": 13, "piloto": "Leonardo Fujimura", "equipe": "Red Bull", "incidente": "Corte de curvas", "punicao": "Aviso" },
     { "tempo": "22:46.756", "volta": 13, "piloto": "Leonardo Fujimura", "equipe": "Red Bull", "incidente": "Múltiplas advertências", "punicao": "3 segundo(s)" }
-  ],
-  "linkReplay": "replays/pato-gp-f1-2025/06-miami.frr"
+  ]
 }

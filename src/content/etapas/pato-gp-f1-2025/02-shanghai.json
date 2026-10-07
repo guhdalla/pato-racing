@@ -42,6 +42,5 @@
     { "volta": 1, "piloto": "Leonardo Araujo", "equipe": "Scuderia Ferrari HP", "incidente": "Queimou largada", "punicao": "Punição de drive through" },
     { "volta": 1, "piloto": "Leonardo Araujo", "equipe": "Scuderia Ferrari HP", "incidente": "Queimou largada", "punicao": "Tempo de volta inválido" },
     { "tempo": "7:25.476", "volta": 4, "piloto": "Tiago Sinatra", "equipe": "Mercedes-AMG Petronas", "incidente": "Limites da pista excedidos", "punicao": "Aviso" }
-  ],
-  "linkReplay": "replays/pato-gp-f1-2025/02-shanghai.frr"
+  ]
 }

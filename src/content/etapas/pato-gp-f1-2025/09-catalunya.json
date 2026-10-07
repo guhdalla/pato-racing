@@ -40,6 +40,5 @@
     { "tempo": "14:53.644", "volta": 10, "piloto": "Victor Correia", "equipe": "McLaren", "incidente": "Limites da pista excedidos", "punicao": "Aviso" },
     { "tempo": "19:03.137", "volta": 13, "piloto": "Victor Correia", "equipe": "McLaren", "incidente": "Corte de curvas", "punicao": "Aviso" },
     { "tempo": "19:03.153", "volta": 13, "piloto": "Victor Correia", "equipe": "McLaren", "incidente": "Múltiplas advertências", "punicao": "3 segundo(s)" }
-  ],
-  "linkReplay": "replays/pato-gp-f1-2025/09-catalunya.frr"
+  ]
 }
