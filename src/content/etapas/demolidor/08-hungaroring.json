@@ -1,21 +1,21 @@
 {
-  "campeonatoId": "demolir",
-  "rodada": 11,
-  "circuitoId": "montreal",
+  "campeonatoId": "demolidor",
+  "rodada": 8,
+  "circuitoId": "hungaroring",
   "formatoFimDeSemana": "normal",
   "status": "agendada",
   "sessoes": [
     {
       "tipo": "treino-livre-1",
-      "dataHora": "2026-12-24T00:00:00Z"
+      "dataHora": "2026-12-03T00:00:00Z"
     },
     {
       "tipo": "classificacao",
-      "dataHora": "2026-12-24T00:45:00Z"
+      "dataHora": "2026-12-03T00:45:00Z"
     },
     {
       "tipo": "corrida",
-      "dataHora": "2026-12-24T01:15:00Z"
+      "dataHora": "2026-12-03T01:15:00Z"
     }
   ]
 }

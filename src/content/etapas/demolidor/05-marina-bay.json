@@ -1,21 +1,21 @@
 {
-  "campeonatoId": "demolir",
-  "rodada": 12,
-  "circuitoId": "catalunya",
+  "campeonatoId": "demolidor",
+  "rodada": 5,
+  "circuitoId": "marina-bay",
   "formatoFimDeSemana": "normal",
   "status": "agendada",
   "sessoes": [
     {
       "tipo": "treino-livre-1",
-      "dataHora": "2026-12-31T00:00:00Z"
+      "dataHora": "2026-11-12T00:00:00Z"
     },
     {
       "tipo": "classificacao",
-      "dataHora": "2026-12-31T00:45:00Z"
+      "dataHora": "2026-11-12T00:45:00Z"
     },
     {
       "tipo": "corrida",
-      "dataHora": "2026-12-31T01:15:00Z"
+      "dataHora": "2026-11-12T01:15:00Z"
     }
   ]
 }

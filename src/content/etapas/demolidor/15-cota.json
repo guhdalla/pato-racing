@@ -1,21 +1,21 @@
 {
-  "campeonatoId": "demolir",
-  "rodada": 13,
-  "circuitoId": "las-vegas",
+  "campeonatoId": "demolidor",
+  "rodada": 15,
+  "circuitoId": "cota",
   "formatoFimDeSemana": "normal",
   "status": "agendada",
   "sessoes": [
     {
       "tipo": "treino-livre-1",
-      "dataHora": "2027-01-07T00:00:00Z"
+      "dataHora": "2027-01-21T00:00:00Z"
     },
     {
       "tipo": "classificacao",
-      "dataHora": "2027-01-07T00:45:00Z"
+      "dataHora": "2027-01-21T00:45:00Z"
     },
     {
       "tipo": "corrida",
-      "dataHora": "2027-01-07T01:15:00Z"
+      "dataHora": "2027-01-21T01:15:00Z"
     }
   ]
 }

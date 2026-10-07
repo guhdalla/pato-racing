@@ -1,21 +1,21 @@
 {
-  "campeonatoId": "demolir",
-  "rodada": 14,
-  "circuitoId": "albert-park",
+  "campeonatoId": "demolidor",
+  "rodada": 2,
+  "circuitoId": "monaco",
   "formatoFimDeSemana": "normal",
   "status": "agendada",
   "sessoes": [
     {
       "tipo": "treino-livre-1",
-      "dataHora": "2027-01-14T00:00:00Z"
+      "dataHora": "2026-10-22T00:00:00Z"
     },
     {
       "tipo": "classificacao",
-      "dataHora": "2027-01-14T00:45:00Z"
+      "dataHora": "2026-10-22T00:45:00Z"
     },
     {
       "tipo": "corrida",
-      "dataHora": "2027-01-14T01:15:00Z"
+      "dataHora": "2026-10-22T01:15:00Z"
     }
   ]
 }
