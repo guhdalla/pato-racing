@@ -28,8 +28,8 @@ const etapas = todasEtapas
 const circuitos = await getCollection('circuitos');
 const circuitoPorId = new Map(circuitos.map((c) => [c.id, c.data]));
 
-const classificacaoPilotos = calcularClassificacaoPilotos(etapas);
-const classificacaoEquipes = calcularClassificacaoEquipes(etapas);
+const classificacaoPilotos = calcularClassificacaoPilotos(etapas, campeonato.data);
+const classificacaoEquipes = calcularClassificacaoEquipes(etapas, campeonato.data);
 
 const dateFormatter = new Intl.DateTimeFormat('pt-BR', {
   day: '2-digit',
@@ -42,6 +42,7 @@ function corridaDataHora(etapa: CollectionEntry<'etapas'>) {
 }
 
 const base = import.meta.env.BASE_URL;
+const temCategorias = (campeonato.data.equipes ?? []).some((e) => e.categoria);
 ---
 
 <Layout title={campeonato.data.titulo} description={campeonato.data.descricao}>
@@ -70,7 +71,7 @@ const base = import.meta.env.BASE_URL;
           <div class="pr-table-wrap">
             <table class="pr-table">
               <thead>
-                <tr><th>#</th><th>Piloto</th><th>Equipe</th><th>Pontos</th></tr>
+                <tr><th>#</th><th>Piloto</th><th>Equipe</th>{temCategorias && <th>Cat.</th>}<th>Pontos</th></tr>
               </thead>
               <tbody>
                 {classificacaoPilotos.map((p, i) => (
@@ -78,6 +79,7 @@ const base = import.meta.env.BASE_URL;
                     <td>{i + 1}</td>
                     <td>{p.piloto}</td>
                     <td>{p.equipe ?? '—'}</td>
+                    {temCategorias && <td>{p.categoria ?? '—'}</td>}
                     <td>{p.pontos}</td>
                   </tr>
                 ))}
@@ -91,13 +93,14 @@ const base = import.meta.env.BASE_URL;
             <div class="pr-table-wrap">
               <table class="pr-table">
                 <thead>
-                  <tr><th>#</th><th>Equipe</th><th>Pontos</th></tr>
+                  <tr><th>#</th><th>Equipe</th>{temCategorias && <th>Cat.</th>}<th>Pontos</th></tr>
                 </thead>
                 <tbody>
                   {classificacaoEquipes.map((e, i) => (
                     <tr>
                       <td>{i + 1}</td>
                       <td>{e.equipe}</td>
+                      {temCategorias && <td>{e.categoria ?? '—'}</td>}
                       <td>{e.pontos}</td>
                     </tr>
                   ))}

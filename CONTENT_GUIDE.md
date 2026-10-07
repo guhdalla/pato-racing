@@ -35,6 +35,7 @@ src/content/
    - `sistemaPontuacao`: lista de `{ "posicao": N, "pontos": N }`
    - `pontosVoltaMaisRapida` (número, pode ser `0`)
    - opcionais: `regulamentoTexto`, `regulamentoUrl`, `pontosSprint`, `bannerImagem`, `discordUrl`
+   - opcionais para a tabela de classificação já aparecer zerada antes da 1ª corrida: `equipes` (lista de `{ "nome", "categoria": "A" | "B" | "C" }`) e `pilotos` (lista de `{ "nome", "equipe" }`, com `equipe` igual a um `nome` de `equipes`). Os pontos continuam derivados dos resultados das etapas.
    - `dataInicio` e `dataFim` (ISO 8601)
 3. Crie a pasta `src/content/etapas/<slug>/` para as etapas (próximo passo).
 

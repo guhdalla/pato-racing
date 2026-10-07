@@ -48,6 +48,74 @@
     }
   ],
   "pontosVoltaMaisRapida": 1,
+  "equipes": [
+    {
+      "nome": "McLaren",
+      "categoria": "A"
+    },
+    {
+      "nome": "Red Bull",
+      "categoria": "A"
+    },
+    {
+      "nome": "Mercedes-AMG Petronas",
+      "categoria": "A"
+    },
+    {
+      "nome": "Scuderia Ferrari HP",
+      "categoria": "A"
+    },
+    {
+      "nome": "Visa Cash App Racing Bulls",
+      "categoria": "B"
+    },
+    {
+      "nome": "Williams",
+      "categoria": "B"
+    },
+    {
+      "nome": "Aston Martin",
+      "categoria": "B"
+    },
+    {
+      "nome": "Haas",
+      "categoria": "C"
+    },
+    {
+      "nome": "KICK Sauber",
+      "categoria": "C"
+    },
+    {
+      "nome": "Alpine",
+      "categoria": "C"
+    }
+  ],
+  "pilotos": [
+    {
+      "nome": "Paulo Henrique",
+      "equipe": "Alpine"
+    },
+    {
+      "nome": "Gustavo Dalla",
+      "equipe": "Aston Martin"
+    },
+    {
+      "nome": "Julio Cesar",
+      "equipe": "Aston Martin"
+    },
+    {
+      "nome": "Matheus Costa",
+      "equipe": "Williams"
+    },
+    {
+      "nome": "Renan Lima",
+      "equipe": "Williams"
+    },
+    {
+      "nome": "Breno Bastos",
+      "equipe": "Visa Cash App Racing Bulls"
+    }
+  ],
   "dataInicio": "2026-10-15T00:00:00Z",
   "dataFim": "2026-11-12T02:15:00Z"
 }

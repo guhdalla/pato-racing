@@ -44,6 +44,17 @@ const campeonatos = defineCollection({
       .optional(),
     bannerImagem: z.string().optional(),
     discordUrl: z.string().url().optional(),
+    equipes: z
+      .array(
+        z.object({
+          nome: z.string(),
+          categoria: z.enum(['A', 'B', 'C']).optional(),
+        })
+      )
+      .optional(),
+    pilotos: z
+      .array(z.object({ nome: z.string(), equipe: z.string() }))
+      .optional(),
     dataInicio: z.coerce.date(),
     dataFim: z.coerce.date(),
   }),
