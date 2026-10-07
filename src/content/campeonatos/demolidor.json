@@ -114,6 +114,38 @@
     {
       "nome": "Breno Bastos",
       "equipe": "Visa Cash App Racing Bulls"
+    },
+    {
+      "nome": "Victor Correia",
+      "equipe": "McLaren"
+    },
+    {
+      "nome": "Leonardo Araujo",
+      "equipe": "McLaren"
+    },
+    {
+      "nome": "Leonardo Fujimura",
+      "equipe": "Red Bull"
+    },
+    {
+      "nome": "Lucas Alvarez",
+      "equipe": "Red Bull"
+    },
+    {
+      "nome": "Tiago Sinatra",
+      "equipe": "Mercedes-AMG Petronas"
+    },
+    {
+      "nome": "Iury Crespo",
+      "equipe": "Mercedes-AMG Petronas"
+    },
+    {
+      "nome": "Alysson Litz",
+      "equipe": "Scuderia Ferrari HP"
+    },
+    {
+      "nome": "Nathan Barros",
+      "equipe": "Scuderia Ferrari HP"
     }
   ],
   "dataInicio": "2026-10-15T00:00:00Z",
