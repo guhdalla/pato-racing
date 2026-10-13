@@ -3,7 +3,7 @@
   "rodada": 22,
   "circuitoId": "las-vegas",
   "formatoFimDeSemana": "normal",
-  "status": "agendada",
+  "status": "cancelada",
   "sessoes": [
     {
       "tipo": "treino-livre-1",

@@ -3,7 +3,7 @@
   "rodada": 21,
   "circuitoId": "interlagos",
   "formatoFimDeSemana": "sprint",
-  "status": "agendada",
+  "status": "concluida",
   "sessoes": [
     {
       "tipo": "treino-livre-1",
@@ -25,5 +25,35 @@
       "tipo": "corrida",
       "dataHora": "2026-10-27T02:15:00Z"
     }
+  ],
+  "poleposition": "Paulo Henrique",
+  "voltaMaisRapida": "Paulo Henrique (1:11.250)",
+  "podio": [
+    "Gustavo Dalla",
+    "Julio Cesar",
+    "Matheus Costa"
+  ],
+  "resultadoClassificacao": [
+    {"posicao": 1, "piloto": "Paulo Henrique", "equipe": "Scuderia Ferrari HP"},
+    {"posicao": 2, "piloto": "Julio Cesar", "equipe": "Aston Martin"},
+    {"posicao": 3, "piloto": "Gustavo Dalla", "equipe": "Red Bull"},
+    {"posicao": 4, "piloto": "Breno Bastos", "equipe": "Red Bull"},
+    {"posicao": 5, "piloto": "Matheus Costa", "equipe": "Alpine"},
+    {"posicao": 6, "piloto": "Victor Correia", "equipe": "McLaren"},
+    {"posicao": 7, "piloto": "Tiago Sinatra", "equipe": "Mercedes-AMG Petronas"}
+  ],
+  "resultadoCorrida": [
+    {"posicao": 1, "piloto": "Gustavo Dalla", "equipe": "Red Bull", "pontos": 25, "melhorVolta": "1:11.697", "tempo": "22:20.349"},
+    {"posicao": 2, "piloto": "Julio Cesar", "equipe": "Aston Martin", "pontos": 18, "melhorVolta": "1:12.302", "tempo": "+6.610"},
+    {"posicao": 3, "piloto": "Matheus Costa", "equipe": "Alpine", "pontos": 15, "melhorVolta": "1:12.258", "tempo": "+8.338"},
+    {"posicao": 4, "piloto": "Paulo Henrique", "equipe": "Scuderia Ferrari HP", "pontos": 12, "voltaMaisRapida": true, "melhorVolta": "1:11.250", "tempo": "+14.193"},
+    {"posicao": 5, "piloto": "Breno Bastos", "equipe": "Red Bull", "pontos": 10, "melhorVolta": "1:13.371", "tempo": "+1:02.063"},
+    {"posicao": 6, "piloto": "Tiago Sinatra", "equipe": "Mercedes-AMG Petronas", "pontos": 8, "melhorVolta": "1:15.393", "tempo": "+1:15.766"},
+    {"posicao": 7, "piloto": "Victor Correia", "equipe": "McLaren", "pontos": 6, "melhorVolta": "1:13.909", "tempo": "+ 1 volta"}
+  ],
+  "punicoes": [
+    {"tempo": "15:57.357", "volta": 13, "piloto": "Victor Correia", "equipe": "McLaren", "incidente": "Limites da pista excedidos", "punicao": "Aviso"},
+    {"tempo": "19:16.483", "volta": 16, "piloto": "Paulo Henrique", "equipe": "Scuderia Ferrari HP", "incidente": "Corte de curvas", "punicao": "3 segundo(s)"},
+    {"tempo": "22:37.290", "volta": 18, "piloto": "Breno Bastos", "equipe": "Red Bull", "incidente": "Corte de curvas", "punicao": "3 segundo(s)"}
   ]
 }

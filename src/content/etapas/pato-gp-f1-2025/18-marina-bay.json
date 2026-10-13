@@ -3,7 +3,7 @@
   "rodada": 18,
   "circuitoId": "marina-bay",
   "formatoFimDeSemana": "normal",
-  "status": "agendada",
+  "status": "cancelada",
   "sessoes": [
     {
       "tipo": "treino-livre-1",

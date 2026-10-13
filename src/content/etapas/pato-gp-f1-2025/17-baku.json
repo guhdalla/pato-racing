@@ -3,7 +3,7 @@
   "rodada": 17,
   "circuitoId": "baku",
   "formatoFimDeSemana": "normal",
-  "status": "agendada",
+  "status": "cancelada",
   "sessoes": [
     {
       "tipo": "treino-livre-1",

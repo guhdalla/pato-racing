@@ -3,7 +3,7 @@
   "rodada": 20,
   "circuitoId": "mexico-city",
   "formatoFimDeSemana": "normal",
-  "status": "agendada",
+  "status": "cancelada",
   "sessoes": [
     {
       "tipo": "treino-livre-1",
