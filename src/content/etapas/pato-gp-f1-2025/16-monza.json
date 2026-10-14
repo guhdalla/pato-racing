@@ -3,7 +3,7 @@
   "rodada": 16,
   "circuitoId": "monza",
   "formatoFimDeSemana": "normal",
-  "status": "agendada",
+  "status": "cancelada",
   "sessoes": [
     {
       "tipo": "treino-livre-1",

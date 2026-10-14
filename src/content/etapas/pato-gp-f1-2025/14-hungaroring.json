@@ -3,7 +3,7 @@
   "rodada": 14,
   "circuitoId": "hungaroring",
   "formatoFimDeSemana": "normal",
-  "status": "agendada",
+  "status": "cancelada",
   "sessoes": [
     {
       "tipo": "treino-livre-1",

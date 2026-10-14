@@ -3,7 +3,7 @@
   "rodada": 19,
   "circuitoId": "cota",
   "formatoFimDeSemana": "sprint",
-  "status": "agendada",
+  "status": "cancelada",
   "sessoes": [
     {
       "tipo": "treino-livre-1",

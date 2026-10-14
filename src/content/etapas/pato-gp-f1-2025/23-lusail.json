@@ -3,7 +3,7 @@
   "rodada": 23,
   "circuitoId": "lusail",
   "formatoFimDeSemana": "sprint",
-  "status": "agendada",
+  "status": "cancelada",
   "sessoes": [
     {
       "tipo": "treino-livre-1",
