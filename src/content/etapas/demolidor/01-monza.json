@@ -3,7 +3,7 @@
   "rodada": 1,
   "circuitoId": "monza",
   "formatoFimDeSemana": "normal",
-  "status": "agendada",
+  "status": "concluida",
   "sessoes": [
     {
       "tipo": "classificacao",
@@ -12,6 +12,218 @@
     {
       "tipo": "corrida",
       "dataHora": "2026-10-15T01:15:00Z"
+    }
+  ],
+  "poleposition": "Paulo Henrique",
+  "voltaMaisRapida": "Paulo Henrique (1:23.054)",
+  "podio": [
+    "Paulo Henrique",
+    "Gustavo Dalla",
+    "Matheus Costa"
+  ],
+  "resultadoCorrida": [
+    {
+      "posicao": 1,
+      "piloto": "Paulo Henrique",
+      "equipe": "Alpine",
+      "pontos": 25,
+      "voltaMaisRapida": true,
+      "melhorVolta": "1:23.054",
+      "tempo": "38:44.218"
+    },
+    {
+      "posicao": 2,
+      "piloto": "Gustavo Dalla",
+      "equipe": "Haas",
+      "pontos": 18,
+      "melhorVolta": "1:23.735",
+      "tempo": "+35.629"
+    },
+    {
+      "posicao": 3,
+      "piloto": "Matheus Costa",
+      "equipe": "Visa Cash App Racing Bulls",
+      "pontos": 15,
+      "melhorVolta": "1:23.972",
+      "tempo": "+48.660"
+    },
+    {
+      "posicao": 4,
+      "piloto": "Julio Cesar",
+      "equipe": "Haas",
+      "pontos": 12,
+      "melhorVolta": "1:24.499",
+      "tempo": "+1:05.426"
+    },
+    {
+      "posicao": 5,
+      "piloto": "Renan Lima",
+      "equipe": "Visa Cash App Racing Bulls",
+      "pontos": 10,
+      "melhorVolta": "1:25.081",
+      "tempo": "+ 1 volta"
+    },
+    {
+      "posicao": 6,
+      "piloto": "Alysson Litz",
+      "equipe": "Williams",
+      "pontos": 8,
+      "melhorVolta": "1:25.002",
+      "tempo": "+ 1 volta"
+    },
+    {
+      "posicao": 7,
+      "piloto": "Breno Bastos",
+      "equipe": "Red Bull",
+      "pontos": 6,
+      "melhorVolta": "1:27.135",
+      "tempo": "+ 1 volta"
+    },
+    {
+      "posicao": 8,
+      "piloto": "Tiago Sinatra",
+      "equipe": "Mercedes-AMG Petronas",
+      "pontos": 4,
+      "melhorVolta": "1:28.704",
+      "tempo": "+ 3 voltas"
+    }
+  ],
+  "punicoes": [
+    {
+      "tempo": "6.124",
+      "volta": 1,
+      "piloto": "Breno Bastos",
+      "equipe": "Red Bull",
+      "incidente": "Colisão com outro piloto",
+      "punicao": "Aviso"
+    },
+    {
+      "tempo": "14.779",
+      "volta": 1,
+      "piloto": "Gustavo Dalla",
+      "equipe": "Haas",
+      "incidente": "Corte de curvas",
+      "punicao": "3 segundo(s)"
+    },
+    {
+      "tempo": "20.648",
+      "volta": 1,
+      "piloto": "Julio Cesar",
+      "equipe": "Haas",
+      "incidente": "Colisão com outro piloto",
+      "punicao": "Aviso"
+    },
+    {
+      "tempo": "2:12.336",
+      "volta": 2,
+      "piloto": "Tiago Sinatra",
+      "equipe": "Mercedes-AMG Petronas",
+      "incidente": "Corte de curvas",
+      "punicao": "Aviso"
+    },
+    {
+      "tempo": "6:31.817",
+      "volta": 5,
+      "piloto": "Alysson Litz",
+      "equipe": "Williams",
+      "incidente": "Limites da pista excedidos",
+      "punicao": "Aviso"
+    },
+    {
+      "tempo": "6:36.346",
+      "volta": 5,
+      "piloto": "Breno Bastos",
+      "equipe": "Red Bull",
+      "incidente": "Limites da pista excedidos",
+      "punicao": "Aviso"
+    },
+    {
+      "tempo": "12:44.217",
+      "volta": 9,
+      "piloto": "Tiago Sinatra",
+      "equipe": "Mercedes-AMG Petronas",
+      "incidente": "Corte de curvas",
+      "punicao": "Aviso"
+    },
+    {
+      "tempo": "13:52.404",
+      "volta": 10,
+      "piloto": "Alysson Litz",
+      "equipe": "Williams",
+      "incidente": "Corte de curvas",
+      "punicao": "3 segundo(s)"
+    },
+    {
+      "tempo": "13:54.354",
+      "volta": 10,
+      "piloto": "Matheus Costa",
+      "equipe": "Visa Cash App Racing Bulls",
+      "incidente": "Colisão com outro piloto",
+      "punicao": "Aviso"
+    },
+    {
+      "tempo": "14:45.380",
+      "volta": 10,
+      "piloto": "Tiago Sinatra",
+      "equipe": "Mercedes-AMG Petronas",
+      "incidente": "Colisão com outro piloto",
+      "punicao": "Aviso"
+    },
+    {
+      "tempo": "17:09.840",
+      "volta": 12,
+      "piloto": "Julio Cesar",
+      "equipe": "Haas",
+      "incidente": "Limites da pista excedidos",
+      "punicao": "Aviso"
+    },
+    {
+      "tempo": "17:10.650",
+      "volta": 12,
+      "piloto": "Alysson Litz",
+      "equipe": "Williams",
+      "incidente": "Corte de curvas",
+      "punicao": "3 segundo(s)"
+    },
+    {
+      "tempo": "19:48.297",
+      "volta": 14,
+      "piloto": "Renan Lima",
+      "equipe": "Visa Cash App Racing Bulls",
+      "incidente": "Corte de curvas",
+      "punicao": "Aviso"
+    },
+    {
+      "tempo": "25:35.539",
+      "volta": 17,
+      "piloto": "Tiago Sinatra",
+      "equipe": "Mercedes-AMG Petronas",
+      "incidente": "Corte de curvas",
+      "punicao": "3 segundo(s)"
+    },
+    {
+      "tempo": "33:49.958",
+      "volta": 23,
+      "piloto": "Alysson Litz",
+      "equipe": "Williams",
+      "incidente": "Limites da pista excedidos",
+      "punicao": "Aviso"
+    },
+    {
+      "tempo": "36:55.806",
+      "volta": 23,
+      "piloto": "Tiago Sinatra",
+      "equipe": "Mercedes-AMG Petronas",
+      "incidente": "Corte de curvas",
+      "punicao": "Aviso"
+    },
+    {
+      "tempo": "36:55.852",
+      "volta": 23,
+      "piloto": "Tiago Sinatra",
+      "equipe": "Mercedes-AMG Petronas",
+      "incidente": "Múltiplas advertências",
+      "punicao": "3 segundo(s)"
     }
   ]
 }
