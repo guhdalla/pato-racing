@@ -42,7 +42,7 @@
     {
       "posicao": 3,
       "piloto": "Matheus Costa",
-      "equipe": "Aston Martin",
+      "equipe": "Visa Cash App Racing Bulls",
       "pontos": 15,
       "melhorVolta": "1:23.972",
       "tempo": "+48.660"
@@ -58,7 +58,7 @@
     {
       "posicao": 5,
       "piloto": "Renan Lima",
-      "equipe": "Aston Martin",
+      "equipe": "Visa Cash App Racing Bulls",
       "pontos": 10,
       "melhorVolta": "1:25.081",
       "tempo": "+ 1 volta"
@@ -157,7 +157,7 @@
       "tempo": "13:54.354",
       "volta": 10,
       "piloto": "Matheus Costa",
-      "equipe": "Aston Martin",
+      "equipe": "Visa Cash App Racing Bulls",
       "incidente": "Colisão com outro piloto",
       "punicao": "Aviso"
     },
@@ -189,7 +189,7 @@
       "tempo": "19:48.297",
       "volta": 14,
       "piloto": "Renan Lima",
-      "equipe": "Aston Martin",
+      "equipe": "Visa Cash App Racing Bulls",
       "incidente": "Corte de curvas",
       "punicao": "Aviso"
     },
